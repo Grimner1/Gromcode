@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Селекторы атрибутов</title>
+    <title>Selectors Exercise</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -12,45 +12,42 @@
   </head>
 
   <body>
+    
     <style>
-      [data-description="anchors"] {
-        background: gray;
+      .super-important.highlighted {
+        background: red;
       }
 
-      [data-description] {
+      .company-data, .highlighted {
+        background: yellow;
+      }
+
+      li.user-data {
         font-size: 24px;
       }
 
-      a[href][target] {
-        color: green;
-      }
-
-      input[type="text"] {
-        background: orange;
+      span.user-data {
+        font-size: 10px;
       }
     </style>
-      
-    <header>
-      <h1>Селекторы атрибутов</h1>
-    </header>
-    <main>
-      <p data-description="attributes">
-        Атрибуты используются, чтобы асоциировать некоторы данные с определенным элементом
-      </p>
-      <p data-description="anchors">
-        Ссылки используются в HTML документах для переходов на другие страницы
-        <a href="#">того же</a> или
-        <a target="_blank" href="https://www.wikipedia.org/">других</a> вебсайтов
-      </p>
+
+    <div class="description-text">
+      <p class="super-important highlighted">Super important highlighted text</p>
+      <p class="highlighted">Less important text</p>
+      <p>Really not so important paragraph</p>
       <div>
-        <p>
-          Инпуты могут могут принимать не только текстовые данные от пользователя, а и выступать в
-          роли чекбоксов и многих других элементов
-        </p>
-        <input type="text" />
-        <input type="checkbox" />
-        <input type="password" />
+        <span class="user-data">First name</span>
+        <span class="user-data">Last name</span>
+        <span class="company-data">Last name</span>
+        <span class="user-data">Last name</span>
       </div>
-    </main>
+      <div>
+        <p>User roles</p>
+        <ul>
+          <li class="user-data">Product development</li>
+          <li class="user-data">Mentoring</li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
