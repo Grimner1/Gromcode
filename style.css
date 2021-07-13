@@ -2,7 +2,7 @@
     background: green;
 }
 
-li {
+li, ol {
     font-size: 24px;
 }
 
