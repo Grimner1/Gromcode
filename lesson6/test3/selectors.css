@@ -10,7 +10,7 @@ li[data-description~="even"] {
     background: grey;
 }
 
-li[data-description^="even"] {
+li[data-description*="even"] {
     font-size: 24px;
 }
 
