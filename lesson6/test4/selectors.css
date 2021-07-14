@@ -1,9 +1,9 @@
-.already-learned ol h3 {
+.already-learned ol {
     background: green;
     color: white;
 }
 
-.to-be-learned ol h3{
+.to-be-learned ol{
     background: orange;
     color: green;
 }
