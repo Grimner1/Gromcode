@@ -1,92 +1,58 @@
-/* body {
-    position: relative;
-    height: 100%;
-    width: 100%;
-} */
-
-.header {
-    margin: 0;
-    height: 40px;
-    /* display: block */
-    position: fixed;
-    background: darkturquoise;
-    width: 100%;
-    /* line-height: 100%; */
-    z-index: 1000;
-}
-
-nav {
-    /* display: block; */
-}
-
-ul {
-    /* display: inline-block; */
-}
-
-.nav-item {
-    /* display: inline-block; */
-    float: left;
-    margin-left: 16px;
-    color: white;
-    list-style-type: none;
-    line-height: 50%;
-}
-
-main {
-    /* position: relative; */
-    /* display: block; */
-    height: 5000px;
-    background: beige;
-    /* position: static; */
-}
-
-.head {
-    
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    background: aquamarine;
+div {
+    padding: 16px;
+  }
+  
+  .child,
+  .parent {
+    border: 2px solid black;
+  }
+  
+  .child {
     position: absolute;
-    /* position: relative; */
-    z-index: 1;
-    top: calc(50% - 100px);
-    left: calc(50% - 100px);
-    /* justify-content: center; */
-    /* top: 5%; */
-}
-
-.ear {
-    position: absolute;
-    width: 40px;
-    height: 60px;
-    background: brown;
-    float: left;
-    }
-
-.ear_left {
-    top: -60px;
-    left: -40px;
-}
-
-.ear_right {
-    top: -60px;
-    right: -40px;
-}
-
-.eye {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: gray;
-    position: absolute;
-    top: 80px;
-    /* left: 40px; */
-}
-
-.eye_right {
-    left: 40px;
-}
-
-.eye_left {
+    top: 90px;
     right: 40px;
-}
+  }
+  
+  .parent {
+    width: 300px;
+    height: 100px;
+    background-color: yellowgreen;
+  }
+  
+  .child {
+    background: yellow;
+    position: absolute;
+  }
+  
+  .tip {
+    opacity: 1;
+    background-color: whitesmoke;
+    padding: 0 8px;
+  }
+  
+  .green {
+    width: 100px;
+    height: 100px;
+    background: green;
+    float: left;
+  }
+  
+  .container {
+    height: 2000px;
+  }
+  
+  .static-parent {
+      position: static;
+  }
+
+  .relative-parent {
+      position: relative;
+  }
+
+  .absolute-parent {
+      position: absolute;
+  }
+
+  .fixed-parent {
+      position: fixed;
+  }
