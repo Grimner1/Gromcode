@@ -1,0 +1,71 @@
+
+
+.header {
+    margin: 0;
+    height: 40px;
+    position: fixed;
+    background: darkturquoise;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.nav-item {
+    float: left;
+    margin-left: 16px;
+    color: white;
+    list-style-type: none;
+    line-height: 50%;
+}
+
+main {
+    height: 5000px;
+    background: beige;
+}
+
+.head {
+    
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background: aquamarine;
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.ear {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: brown;
+    float: left;
+    }
+
+.ear_left {
+    top: -60px;
+    left: -40px;
+}
+
+.ear_right {
+    top: -60px;
+    right: -40px;
+}
+
+.eye {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: gray;
+    position: absolute;
+    top: 80px;
+}
+
+.eye_right {
+    left: 40px;
+}
+
+.eye_left {
+    right: 40px;
+}
