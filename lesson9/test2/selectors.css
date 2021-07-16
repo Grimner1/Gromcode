@@ -1,0 +1,19 @@
+.container {
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.red {
+background: red;
+float: right;
+}
+
+.green {
+background: green;
+float: left;
+}
+
+.footer {
+    clear: both;
+}
