@@ -1,21 +1,12 @@
-body {
-    background: antiquewhite;
-}
-
-.div1 {
-    box-sizing: content-box;
-    background: aquamarine;
-}
-
-.div2 {
-    box-sizing: border-box;
-    background: azure;
-}
-
 div {
-    margin: 16px;
-    padding: 16px;
-    width: 512px;
-    height: 128px;
-    border: 8px solid black;
+    font-size: 24px;
+    background: bisque;
+    border-top: 10px solid firebrick;
+    border-right: 20px solid chartreuse;
+    border-bottom: 10px dashed burlywood;
+    border-left: 20px dashed aqua;
+    margin: 50px 100px;
+    padding: 20px;
+    height: 140px;
+    width: 420px;
 }
