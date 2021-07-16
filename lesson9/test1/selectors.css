@@ -1,0 +1,92 @@
+/* body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+} */
+
+.header {
+    margin: 0;
+    height: 40px;
+    /* display: block */
+    position: fixed;
+    background: darkturquoise;
+    width: 100%;
+    /* line-height: 100%; */
+    z-index: 1000;
+}
+
+nav {
+    /* display: block; */
+}
+
+ul {
+    /* display: inline-block; */
+}
+
+.nav-item {
+    /* display: inline-block; */
+    float: left;
+    margin-left: 16px;
+    color: white;
+    list-style-type: none;
+    line-height: 50%;
+}
+
+main {
+    /* position: relative; */
+    /* display: block; */
+    height: 5000px;
+    background: beige;
+    /* position: static; */
+}
+
+.head {
+    
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background: aquamarine;
+    position: absolute;
+    /* position: relative; */
+    z-index: 1;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    /* justify-content: center; */
+    /* top: 5%; */
+}
+
+.ear {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: brown;
+    float: left;
+    }
+
+.ear_left {
+    top: -60px;
+    left: -40px;
+}
+
+.ear_right {
+    top: -60px;
+    right: -40px;
+}
+
+.eye {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: gray;
+    position: absolute;
+    top: 80px;
+    /* left: 40px; */
+}
+
+.eye_right {
+    left: 40px;
+}
+
+.eye_left {
+    right: 40px;
+}
