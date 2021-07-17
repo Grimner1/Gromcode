@@ -4,22 +4,22 @@ div {
     float: left;   
 }
 
-.blok1 {
+.block_red {
     background: red;
 }
 
-.blok2 {
+.block_green {
     background: green;
 }
 
-.blok3 {
+.block_blue {
     background: blue;
 }
 
-.blok4 {
+.block_yellow {
     background: yellow;
 }
 
-.blok5 {
+.blok_black {
     background: black;
 }
