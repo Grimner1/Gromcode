@@ -1,0 +1,25 @@
+div {
+    height: 200px;
+    width: 20%;
+    float: left;   
+}
+
+.blok1 {
+    background: red;
+}
+
+.blok2 {
+    background: green;
+}
+
+.blok3 {
+    background: blue;
+}
+
+.blok4 {
+    background: yellow;
+}
+
+.blok5 {
+    background: black;
+}
