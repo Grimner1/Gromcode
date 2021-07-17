@@ -2,18 +2,22 @@
     width: 50%;
     box-sizing: border-box;
     float: left;
+    box-sizing: border-box;
 }
 
 .red {
 background: red;
 float: right;
+box-sizing: border-box;
 }
 
 .green {
 background: green;
 float: left;
+box-sizing: border-box;
 }
 
 .footer {
     clear: both;
+    box-sizing: border-box;
 }
