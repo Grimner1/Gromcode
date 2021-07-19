@@ -47,6 +47,10 @@ aside li {
     margin-bottom: 16px;
 }
 
+.news h2 {
+    margin: 0;
+}
+
 .section {
     background: pink;
     flex-grow: 1;
