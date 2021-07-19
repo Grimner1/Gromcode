@@ -1,7 +1,10 @@
+body {
+    display: flex;
+}
 
 div {
     height: 300px;
-    width: 100%vw;    
+    flex-grow: 1;
 }
 
 .block_red {
