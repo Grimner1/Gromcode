@@ -5,6 +5,8 @@
 
 .dropdown {
     margin: 16px;
+    display: inline-flex;
+    position: relative;
 }
 
 .menu-button {
@@ -16,9 +18,6 @@
     cursor: pointer;
 }
 
-.menu-list {
-    display: none;
-}
 
 .menu-list {
     position: absolute;
@@ -30,7 +29,9 @@
     min-width: 120px;
     z-index: 1;
     list-style-type: none;
-    top: -1;
+    display: none;
+    top: 50px;
+    /* left: 100px; */
 }
 
 .menu-item {
