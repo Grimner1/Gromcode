@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    position: relative;
+    margin: 0 auto;
+}
+
+article {
+    margin: 8px;
+    padding: 16px;
+    background: bisque;
+    display: box;
+    flex-basis: 300px;
+    flex-grow: 1;
+}
