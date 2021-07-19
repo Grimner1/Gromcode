@@ -28,7 +28,7 @@ aside {
 }
 
 aside > div {
-    align-self: center;
+    
 }
 
 aside li {
@@ -37,12 +37,14 @@ aside li {
     margin-left: 16px;
 }
 
-.list {
+.list2 {
     padding: 0;
 }
 
-aside ul {
-    
+.news {
+    align-self: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .section {
@@ -69,8 +71,8 @@ header {
     align-items: center;
 }
 
-header nav {
-
+.list1 {
+    padding: 0;
 }
 
 header ul {
