@@ -1,0 +1,25 @@
+
+div {
+    height: 300px;
+    width: 100%vw;    
+}
+
+.block_red {
+    background: red;
+}
+
+.block_green {
+    background: green;
+}
+
+.block_blue {
+    background: blue;
+}
+
+.block_yellow {
+    background: yellow;
+}
+
+.block_black {
+    background: black;
+}
