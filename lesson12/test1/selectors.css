@@ -1,10 +1,9 @@
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 18px;
- 
 }
 
-body {
+section {
   margin: 32px;
 }
 
@@ -19,7 +18,7 @@ p {
 }
 
 .ppp {
-  font-weight: 700;
+  /* font-weight: 900; */
   letter-spacing: 3px;
   font-size: 24px;
   opacity: .8;
