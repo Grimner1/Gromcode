@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 16px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: arial;
+    font-weight: 700;
+    font-size: 96px;
+    background: linear-gradient(45deg, yellow, red);
+    color: rgba(128, 128, 128, 0);
+    -webkit-background-clip: text;
+}
