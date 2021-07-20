@@ -10,9 +10,6 @@ body {
 
 h1 {
   text-align: center;
-}
-
-h1 span {
   text-transform: uppercase;
   word-spacing: 20px;
 }
