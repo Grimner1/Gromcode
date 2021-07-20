@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 div {
   width: 300px;
   height: 500px;
@@ -20,3 +25,7 @@ body {
   text-align: center;
 }
 
+span {
+  position: relative;
+  top: 32px;
+}
