@@ -4,9 +4,9 @@ html {
  
 }
 
-body {
+/* body {
   margin: 32px;
-}
+} */
 
 h1 {
   text-align: center;
@@ -14,13 +14,10 @@ h1 {
 
 h1 span {
   text-transform: uppercase;
+  word-spacing: 20px;
 }
 
-#span1 {
-  margin-right: 20px;
-}
-
-section p {
+p {
   line-height: 28px;
 }
 
