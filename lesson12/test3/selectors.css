@@ -1,5 +1,8 @@
 li {
     list-style-type: none;
+}
+
+.list {
     font-size: 1.5em;
 }
 
