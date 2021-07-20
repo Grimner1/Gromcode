@@ -1,9 +1,14 @@
 html {
   font-family: 'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 * {
-  margin: 3px;
+  margin: 32px;
+}
+
+h1 {
+  text-align: center;
 }
 
 h1 span {
