@@ -1,0 +1,32 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 3px;
+}
+
+h1 span {
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+section p {
+  line-height: 28px;
+}
+
+.ppp {
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 24px;
+  opacity: .8;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  color: gray;
+}
