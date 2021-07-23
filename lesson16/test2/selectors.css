@@ -2,3 +2,7 @@ div {
   margin: 16px;
 }
 
+input {
+  border-color:rgb(229,151,0);
+  border-style: solid;
+}
