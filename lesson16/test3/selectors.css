@@ -24,7 +24,3 @@ input[type="checkbox"] {
 input:checked + span {
     background: #006400;
 }
-
-input {
-    
-}
