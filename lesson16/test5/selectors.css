@@ -6,6 +6,10 @@ form {
     margin: 32px;
 }
 
-input {
+/* input {
+    margin: 8px;
+} */
+
+.form input {
     margin: 8px;
 }
