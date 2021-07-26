@@ -10,12 +10,14 @@ button {
   font-family: 'Courier New', Courier, monospace;
   cursor: pointer;
   line-height: 50px;
+  font-weight: 700;
 }
 
 .small-bird {
   width: 32px;
   height: 32px;
   vertical-align: middle;
+  fill: white
 }
 
 .button {
@@ -26,6 +28,6 @@ button {
   background: green;
 }
 
-.second {
+/* .second {
  font-weight: solid;
-}
+} */
