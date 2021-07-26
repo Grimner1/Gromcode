@@ -28,6 +28,6 @@ button {
   background: green;
 }
 
-/* .second {
- font-weight: solid;
-} */
+button:hover {
+  color: darkcyan;
+}
