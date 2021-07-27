@@ -3,23 +3,23 @@ body {
     justify-content: space-around;
 }
 
-.fa-battery-full {
+i .fa-battery-full::before {
     font-size: 16px;
 }
 
-.fa-battery-three-quarters {
+.fa-battery-three-quarters::before {
     font-size: 32px;
 }
 
-.fa-battery-half {
+.fa-battery-half::before {
     font-size: 64px;
 }
 
-.fa-battery-quarter {
+.fa-battery-quarter::before {
     font-size: 128px;
 }
 
-.fa-battery-empty {
+.fa-battery-empty::before {
     font-size: 256px;
 }
 
