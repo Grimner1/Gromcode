@@ -24,8 +24,8 @@ button {
   display: inline-block;
 }
 
-.first:hover {
-  background: green;
+.first:hover > .small-bird{
+  fill: green;
 }
 
 button:hover {

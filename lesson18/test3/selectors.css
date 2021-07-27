@@ -3,7 +3,7 @@ body {
     justify-content: space-around;
 }
 
-i .fa-battery-full::before {
+.fa-battery-full::before {
     font-size: 16px;
 }
 
