@@ -15,7 +15,7 @@
     font-family: monospace;
     font-size: 16px;
     text-transform: uppercase;
-    animation: blink 2s infinite;
+    animation: blink 2s infinite linear;
 }
 
 .circle {
