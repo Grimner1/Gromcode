@@ -15,10 +15,12 @@ body {
     height: 100vh;
 }
 
+.header {
+    background: linear-gradient(60deg, red, orange);
+}
+
 .header h1 {
     color: white;
-    background: linear-gradient(60deg, red, orange);
-    margin: auto;
     text-align: center;
     flex-grow: 0;
 }
