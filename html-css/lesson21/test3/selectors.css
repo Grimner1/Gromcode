@@ -51,6 +51,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin: .5em;
 }
 
 .nav-list-link {
