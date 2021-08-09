@@ -2,56 +2,97 @@
     box-sizing: border-box;
 }
 
-.container {
+html {
+
+    font-family: Verdana;
+    color: #555;
+    font-size: 16px;
+}
+
+body {
     display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 
-.spinner {
+.header h1 {
+    color: white;
+    background: linear-gradient(60deg, red, orange);
     margin: auto;
+    text-align: center;
+    flex-grow: 0;
+}
+
+/* -----------------------------------main start */
+.main {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    flex-grow: 1;
 }
 
-.spinner-text {
-    font-family: monospace;
-    font-size: 16px;
-    text-transform: uppercase;
-    animation: blink 2s infinite linear;
+.navigation {
+    flex-basis: 20%;
+    overflow: hidden;
+    
+ 
 }
 
-.circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 4px solid lightgray;
-    border-top: 4px solid black;
-    animation: spin 2s infinite linear;
-    margin-bottom: 8px;
+.nav-list {
+    padding: 0;
+    list-style: none;
 }
 
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
+.nav-list-item {
+    background: #808080;
+    line-height: 2em;
+    margin-bottom: .5em;
+    display: flex;
+    color: white;
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+.nav-list-link {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding-left: .5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
-    100% {
-        transform: rotate(360deg);
-    }
+.section {
+    padding: .5em;
+    flex-basis: 60%;
+    font-size: 1.25em;
+}
+
+.section__header {
+    font-size: 5vw;
+    margin: auto;
+    text-align: center;
+}
+
+.units-list {
+    line-height: 1.75em;
+}
+
+.css-units {
+    color: #8b0000;
+    background: #e5e5e5;
+    font-size: 1.125em;
+    font-weight: 700;
+}
+
+.news {
+    flex-basis: 20%;
+    padding: .5em;
+}
+/* ------------------------------------main end */
+.footer {
+    background: #e5e5e5;
+    flex-basis: auto;
+    padding: .5em;
+    text-align: center;
+    flex-grow: 0;
 }
