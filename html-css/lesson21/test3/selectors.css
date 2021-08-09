@@ -42,8 +42,9 @@ body {
     list-style: none;
 }
 
-.nav-list-item {
+.nav-list>.nav-list-item {
     background: #808080;
+    height: 2em;
     line-height: 2em;
     margin-bottom: .5em;
     display: flex;
