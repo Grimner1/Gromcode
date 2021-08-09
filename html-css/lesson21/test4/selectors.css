@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .font-in-px {
@@ -15,7 +15,7 @@ html {
 }
 
 .font-in-vw {
-    font-size: 5wv;
+    font-size: 5vw;
 }
 
 .font-in-percents {
