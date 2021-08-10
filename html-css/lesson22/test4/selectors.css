@@ -45,7 +45,7 @@ main {
 .nav-list-item {
     background: #808080;
     height: 2em;
-    margin-bottom: 2em;
+    margin-bottom: .5em;
 }
 
 .nav-list-link {
