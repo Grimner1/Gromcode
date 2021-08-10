@@ -35,6 +35,7 @@ body {
 .navigation {
     flex-basis: 20%;
     overflow: hidden;
+    padding: .5em;
 }
 
 .nav-list {
