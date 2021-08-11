@@ -40,6 +40,10 @@ li {
             display: flex;
         }
     }
+
+    &__item_active:hover .submenu {
+        display: flex;
+    }
 }
 
 .submenu {
@@ -50,12 +54,12 @@ li {
     color: #fff;
     min-width: 120px;
     z-index: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     // bottom: -3em;
     top: 3em;
-
+    
     &__item {
         padding-left: 8px;
         padding-right: 8px;
