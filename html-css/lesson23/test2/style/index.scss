@@ -1,0 +1,47 @@
+
+@import 'variables.scss';
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+
+    @include for-landscape {
+        flex-direction: row;
+    }
+
+    @include for-portrait {
+        flex-direction: column;
+    }
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: #ff7f50;
+    margin: 8px;
+
+    @include for-small {
+        background: #8a2be2;
+    }
+
+    @include for-medium {
+        background: #a61;
+    }
+
+    @include for-large {
+        background: #c47;
+    }
+}
+
+
