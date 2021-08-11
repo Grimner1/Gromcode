@@ -10,37 +10,47 @@ html {
 }
 
 body {
+    height: 100vh;
+}
+
+.all {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-
 
     @include for-large {
         flex-direction: row;
     }
 }
 
-div {
-    height: 200px;
-    display: flex;
-    flex: 1;
-}
-
 .main {
     display: flex;
     flex-direction: column;
-    flex: 2;
+    
 
     @include for-mid {
         flex-direction: row;
+        flex: 2;
     }
 
     &__nav {
         background-color: #ff7f50;
+        height: 200px;
+        display: flex;
+
+
+        @include for-mid {
+            flex: 1;
+        }
     }
 
     &__list {
         background: #006400;
+        height: 200px;
+        display: flex;
+
+        @include for-mid {
+            flex: 1;
+        }
     }
 }
 
@@ -54,6 +64,11 @@ span {
 
 .news {
     background: #0ff;
-    flex: 1;
+    height: 200px;
+    display: flex;
+
+    @include for-large {
+        flex: 1;
+    }
 }
 

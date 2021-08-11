@@ -7,37 +7,48 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   height: 100vh;
 }
+
+.all {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 900px) {
-  body {
+  .all {
     flex-direction: row;
   }
-}
-
-div {
-  height: 200px;
-  display: flex;
-  flex: 1;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  flex: 2;
 }
 @media screen and (min-width: 600px) {
   .main {
     flex-direction: row;
+    flex: 2;
   }
 }
 .main__nav {
   background-color: #ff7f50;
+  height: 200px;
+  display: flex;
+}
+@media screen and (min-width: 600px) {
+  .main__nav {
+    flex: 1;
+  }
 }
 .main__list {
   background: #006400;
+  height: 200px;
+  display: flex;
+}
+@media screen and (min-width: 600px) {
+  .main__list {
+    flex: 1;
+  }
 }
 
 span {
@@ -50,7 +61,13 @@ span {
 
 .news {
   background: #0ff;
-  flex: 1;
+  height: 200px;
+  display: flex;
+}
+@media screen and (min-width: 900px) {
+  .news {
+    flex: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
