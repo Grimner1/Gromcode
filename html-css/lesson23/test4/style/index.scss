@@ -1,0 +1,59 @@
+@import 'layout.scss';
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+
+    @include for-large {
+        flex-direction: row;
+    }
+}
+
+div {
+    height: 200px;
+    display: flex;
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+
+    @include for-mid {
+        flex-direction: row;
+    }
+
+    &__nav {
+        background-color: #ff7f50;
+    }
+
+    &__list {
+        background: #006400;
+    }
+}
+
+span {
+    text-transform: lowercase;
+    padding: 8px;
+    background: #faebd7;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.news {
+    background: #0ff;
+    flex: 1;
+}
+
