@@ -1,0 +1,7 @@
+$large-size: 1400px;
+
+@mixin for-large {
+    @media (min-width: $large-size) {
+        @content;
+    }
+}

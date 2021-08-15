@@ -1,0 +1,121 @@
+@import 'veriables.scss';
+
+.order {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 15px;
+    background-color: #F4F5F7;
+
+    @include for-large {
+        flex-direction: row;
+        height: 441px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img-div {
+        width: 200px;
+        height: 220px;
+        margin: 0 auto 40px;
+
+        &_img {
+            height: 100%;
+        }
+
+        @include for-large {
+            margin: 0;
+            margin-right: 120px;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    &__content {
+        
+
+        &_h1 {
+            font-size: 39px;
+            text-align: center;
+            margin: 0 0 18px 0;
+            max-width: 555px;
+
+            @include for-large {
+                text-align: left;
+                
+            }
+        }
+
+        &_text {
+            display: block;
+            font-size: 22px;
+            line-height: 1.4em;
+            margin: 0 0 40px 0;
+            max-width: 555px;
+        }
+
+        &_trial {
+            font-size: 14px;
+            color: #2b292dbb;
+            max-width: 555px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 555px;
+
+        @include for-large {
+            flex-direction: row;
+        }
+// =============================================don't work
+
+        // &_input-text {
+        //     height: 48px;
+        //     text-align: center;
+        // }
+
+        // &_button {
+        //     width: 290px;
+        //     height: 48px;
+        //     background: #3040C4;
+        //     color: #ffffff;
+        //     border-radius: 2px;
+        //     font-weight: 700;
+        //     font-size: 18px;
+        //     border: 0;
+        //     margin-bottom: 15px;
+        // }
+    }
+}
+
+.order_form_input-text {
+    height: 48px;
+    // text-align: center;
+    font-size: 18px;
+    margin-bottom: 12px;
+
+    @include for-large {
+        width: 385px;
+        margin-right: 10px;
+    }
+}
+
+.order_form_button {
+    width: 290px;
+    height: 48px;
+    background: #3040C4;
+    color: #ffffff;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 18px;
+    border: 0;
+    margin-bottom: 15px;
+
+    @include for-large {
+        width: 160px;
+    }
+}
+
+// =============================================don't work

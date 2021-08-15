@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+<!-- ====================================================header -->
+
+    <header class="header">
+      <div class="header__nav">
+        <div class="header__nav_logo">
+          <div class="logo">
+            <img class="logo__img" src="img\header\logo.png" alt="logo">
+          </div>
+
+          <div class="logo-text">
+            <div class="logo-text__h1">
+              <h1>Foundation</h1>
+            </div>
+
+            <div class="logo-text__text">
+              <span>Startup landing template</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header__nav-list">
+            <ul class="header__menu">
+              <li class="header__menu_selected">Home</li>
+              <li>Stories</li>
+              <li  class="header__menu_arrow">Library
+                <ul class="header__menu_arrow-list">
+                  <li><img src="img/header/Arrow.png" alt="Arrow"></li>
+                </ul>
+              </li>
+              
+            </ul>
+        </div>
+
+        <div class="header__button">
+          <button class="button_get-started">Get Started</button>
+        </div>
+
+        <div class="header__nav_mob-menu">
+          <div class="mob-img">
+            <img src="img\header\img-list.png" alt="img-list">
+          </div>
+        </div>
+      </div>
+
+      <div class="header__content">
+        <span class="header__content_h1"><h1>Build stunning websites & apps.</h1></span>
+        <span class="header__content_text">Create live segments and target the right people for messages based on their behaviors.</span>
+
+        <button button class="button-get-started">Get Started</button>
+        <button class="button-learn-more">Learn More</button>
+
+        <div class="header__img-man">
+          <img class="header__img-man_img" src="img\header\img-man.png" alt="img-man">
+        </div>
+      </div>
+      
+      
+    </header>
+
+<!-- ==========================================audience -->
+
+<div class="audience">
+  <div class="audience__text-block">
+    <span class="audience__text-block_h2">
+      <h2>Engage Visitors</h2>
+    </span>
+    
+    <span class="audience__text-block_h1">
+      <h1>Understand your audience</h1>
+    </span>
+
+    <span class="audience__text-block_text">
+      Early stage company? Eligible applicants get all of our products for just $49 a month.
+    </span>
+  </div>
+
+  <div class="audience__buttons">
+    <button class="audience__buttons_get-started">Get Started</button>
+    <button class="audience__buttons_learn-more">Learn More</button>
+  </div>
+
+  <div class="audience__images">
+    <img class="audience__images_img" src="img/audience/face.png" alt="face">
+    <img class="audience__images_img selected" src="img/audience/TV.png" alt="TV">
+    <img class="audience__images_img" src="img/audience/mail-man.png" alt="mail-man">
+    <img class="audience__images_img" src="img/audience/moon-lamp.png" alt="moon-lamp">
+  </div>
+</div>
+
+
+<!-- =============================================order -->
+
+    <div class="order">
+      <div class="order__img-div">
+        <img class="order__img-div_img" src="img/order/window.png" alt="window and fox">
+      </div>
+
+      <div class="order__content">
+        <h1 class="order__content_h1">Start your free trial.</h1>
+        <span class="order__content_text">Get notified about company updates, news and blog posts. We hate spam.</span>
+        <form class="order__form">
+          <input class="order_form_input-text" type="text" value="  Enter yuor email">
+          <input class="order_form_button" type="button" value="Get Started">
+        </form>
+
+        <span class="order__content_trial">
+          Free 14-day trial · Easy setup · Cancel any time. Check out <a href="#">Terms of Use</a>.
+        </span>
+
+      </div>
+    </div>
+
+    <!-- =========================================footer -->
+
+    <footer class=".footer">
+      <div class="footer-content">
+        <div class="first">
+          <div class="first__logo-div">
+            <div class="first__logo-img">
+              <img src="img/footer/logo.png" alt="logo">
+            </div>
+            <div class="first__logo-text">
+              <div class="first__logo-text_h1"><h1>Foundation</h1></div>
+              <div class="first__logo-text_text">Startup landing template</div>
+            </div>
+          </div>
+          <div class="first__content-text">
+            <span>Foundation is a website template for startups and small teams. It helps to build a website in no time.</span>
+          </div>
+
+          <div class="first__logos">
+            <div class="first__logos_apple">
+              <img src="img/footer/AppStore.png" alt="">
+            </div>
+
+            <div class="first__logos_google">
+              <img src="img/footer/Google Play.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="second">
+          <h1 class="second__h1">Product</h1>
+          <ul class="second__list">
+            <li class="second__list_li">Acquire Users</li>
+            <li class="second__list_li">Content Marketing</li>
+            <li class="second__list_li">Website Templates</li>
+            <li class="second__list_li">Customer Management</li>
+            <li class="second__list_li">Virtual Inbox</li>
+          </ul>
+        </div>
+
+        <div class="third">
+          <h1 class="third__h1">Company</h1>
+          <ul class="third__list">
+            <li class="third__list_li">About Foundation</li>
+            <li class="third__list_li">Brand Guidelines</li>
+            <li class="third__list_li">Press Kit</li>
+            <li class="third__list_li">Support</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-buttom">
+          <ul class="footer-buttom__list">
+            <li class="footer-buttom__list_li">Terms</li>
+            <li class="footer-buttom__list_li">Privacy</li>
+            <li class="footer-buttom__list_li">License</li>
+          </ul>
+
+        <div class="footer-buttom__icon">
+          <img class="footer-buttom__icon_img" src="img/footer/twitter.png" alt="twitter">
+          <img class="footer-buttom__icon_img" src="img/footer/fb.png" alt="facebook">
+          <img class="footer-buttom__icon_img" src="img/footer/LinkedIn.png" alt="LinkedIn">
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
