@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     background: #d9eff7;
-    padding: 50px 15px;
+    padding: 35px 15px;
     align-items: center;
     justify-content: center;
 
@@ -62,6 +62,7 @@
 
         @include for-large {
             flex-direction: row;
+            margin-bottom: 110px;
         }
 
         &_get-started {
@@ -107,7 +108,7 @@
             width: 160px;
             height: 48px;
             border-radius: 4px;
-            color: #3040C4;
+            color: #000000;
             border-radius: 2px;
             font-weight: 700;
             font-size: 18px;
@@ -126,20 +127,32 @@
             flex-direction: row;
         }
 
-        &_img {
+        &_img-div {
             margin-bottom: 15px;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+            background-color: white;
+            display: flex;
+            width: 262px;
+            height: 300px;
+            border-radius: 8px;
 
             @include for-large {
-                margin-right: 30px;
+                margin-right: 31px;
                 box-shadow: none;
             }
+    
+        }
+
+
+        &_img {
+            margin: auto;
         }
 
 // ================================================don't work
         &_selected {
             display: none;
             box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07);
+            background-color: #3141C5;
         }
 // ================================================don't work
     }
@@ -147,6 +160,7 @@
 
 .selected {
     box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07);
+    background-color: #3141C5;
 
     @include for-large {
         box-shadow: none;

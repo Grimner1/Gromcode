@@ -92,13 +92,14 @@
 
 .order_form_input-text {
     height: 48px;
-    // text-align: center;
+    text-align: center;
     font-size: 18px;
     margin-bottom: 12px;
 
     @include for-large {
         width: 385px;
         margin-right: 10px;
+        text-align: start;
     }
 }
 
