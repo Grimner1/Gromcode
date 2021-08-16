@@ -1,7 +1,7 @@
 
 @import 'veriables';
 
-.header {
+.main-header {
     display: flex;
     background: #F3C6BD;
     flex-direction: column;
@@ -115,6 +115,35 @@
         
         @include for-large {
             display: block;
+        }
+    }
+
+    &__menu {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-size: 17px;
+        width: 270px;
+        padding: 0;
+        margin: auto;
+        height: 25px;
+        justify-content: space-between;
+    
+        &_selected {
+            font-weight: 700;
+        }
+    
+        &_arrow {
+            display: flex;
+            list-style: none;
+        }
+    
+        &_arrow-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-left: 10px;
         }
     }
 
@@ -232,34 +261,34 @@
     }
 }
 
-.header__menu {
-    display: block;
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    font-size: 17px;
-    width: 270px;
-    padding: 0;
-    margin: auto;
-    height: 25px;
-    justify-content: space-between;
+// .main-header__menu {
+//     display: block;
+//     display: flex;
+//     flex-direction: row;
+//     list-style: none;
+//     font-size: 17px;
+//     width: 270px;
+//     padding: 0;
+//     margin: auto;
+//     height: 25px;
+//     justify-content: space-between;
 
-    &_selected {
-        font-weight: 700;
-    }
+//     &_selected {
+//         font-weight: 700;
+//     }
 
-    &_arrow {
-        display: flex;
-        list-style: none;
-    }
+//     &_arrow {
+//         display: flex;
+//         list-style: none;
+//     }
 
-    &_arrow-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-left: 10px;
-    }
-}
+//     &_arrow-list {
+//         list-style: none;
+//         margin: 0;
+//         padding: 0;
+//         margin-left: 10px;
+//     }
+// }
 
 .button_get-started {
     background: #3040C4;
