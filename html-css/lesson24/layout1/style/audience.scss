@@ -3,9 +3,9 @@
 
 .audience {
     display: flex;
-    flex-direction: column;
     background: #d9eff7;
     padding: 35px 15px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -15,26 +15,25 @@
 
     &__text-block {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         padding: 0;
         padding-bottom: 30px;
         margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         &_h2 {
-            text-align: center;
             padding: 0;
             margin: 0;
             padding-bottom: 20px;
-
+            text-align: center;
         }
 
         &_h1 {
-            text-align: center;
             padding: 0;
             margin: 0;
             padding-bottom: 18px;
+            text-align: center;
             font-size: 1.3em;
 
             @include for-large {
@@ -61,11 +60,12 @@
         flex-direction: column;
 
         @include for-large {
-            flex-direction: row;
             margin-bottom: 110px;
+            flex-direction: row;
         }
 
         &_get-started {
+            margin-bottom: 12px;
             width: 290px;
             height: 48px;
             background: #3040C4;
@@ -74,14 +74,13 @@
             font-weight: 700;
             font-size: 18px;
             border: 0;
-            margin-bottom: 12px;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
 
             @include for-large {
-                background: #3040C4;
                 width: 160px;
                 height: 48px;
                 border-radius: 4px;
+                background: #3040C4;
                 color: #ffffff;
                 border-radius: 2px;
                 font-weight: 700;
@@ -92,6 +91,7 @@
         }
 
         &_learn-more {
+        margin-bottom: 40px;
         width: 290px;
         height: 48px;
         background: #ffffff;
@@ -100,20 +100,19 @@
         font-weight: 700;
         font-size: 18px;
         border: 0;
-        margin-bottom: 40px;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
 
         @include for-large {
-            background: #ffffff;
+            margin-left: 10px;
             width: 160px;
             height: 48px;
             border-radius: 4px;
+            background: #ffffff;
             color: #000000;
             border-radius: 2px;
             font-weight: 700;
             font-size: 18px;
             border: 0;
-            margin-left: 10px;
             box-shadow: none;
         }
         }
@@ -129,11 +128,11 @@
 
         &_img-div {
             margin-bottom: 15px;
+            width: 290px;
+            height: 300px;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
             background-color: white;
             display: flex;
-            width: 290px;
-            height: 300px;
             border-radius: 8px;
 
             @include for-large {
@@ -143,26 +142,27 @@
     
         }
 
-
         &_img {
             margin: auto;
         }
 
 // ================================================don't work
-        &_selected {
+        &.selected {
             display: none;
-            box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07);
             background-color: #3141C5;
+            box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15),
+                0px 11px 55px rgba(0, 0, 0, 0.07);
         }
 // ================================================don't work
     }
 }
 
-.selected {
-    box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15), 0px 11px 55px rgba(0, 0, 0, 0.07);
-    background-color: #3141C5;
+// .selected {
+//     background-color: #3141C5;
+//     box-shadow: 0px 13px 18px rgba(0, 0, 0, 0.15),
+//         0px 11px 55px rgba(0, 0, 0, 0.07);
 
-    @include for-large {
-        box-shadow: none;
-    }
-}
+//     @include for-large {
+//         box-shadow: none;
+//     }
+// }

@@ -2,30 +2,31 @@
 @import 'veriables';
 
 .main-header {
+    position: relative;
     display: flex;
-    background: #F3C6BD;
     flex-direction: column;
     min-width: 320px;
-    position: relative;
-
+    background: #F3C6BD;
+    
     @include for-large {
         height: 710px;
     }
     
     &__nav {
-        height: 64px;
         display: flex;
+        padding-left: 15px;
+        height: 64px;
         flex-direction: row;
         background: #FFFFFF;
         box-shadow: 0px 4px 16px rgba(44, 50, 65, 0.08);
-        padding-left: 15px;
+        
 
         @include for-large {
             padding: 0;
             margin: 39px 110px 0 120px;
+            height: 62px;
             background: #ffffff00;
             box-shadow: none;
-            height: 62px;
         }
 
 
@@ -68,9 +69,9 @@
 
                 &__text {
                     display: none;
-                    color: #2B292D90;
                     margin: 0 0 0 15px;
                     padding: 0;
+                    color: #2B292D90;
 
                     @include for-large {
                         display: block;
@@ -119,15 +120,14 @@
     }
 
     &__menu {
-        display: block;
         display: flex;
+        padding: 0;
+        margin: auto;
+        height: 25px;
         flex-direction: row;
         list-style: none;
         font-size: 17px;
         width: 270px;
-        padding: 0;
-        margin: auto;
-        height: 25px;
         justify-content: space-between;
     
         &_selected {
@@ -140,56 +140,51 @@
         }
     
         &_arrow-list {
-            list-style: none;
             margin: 0;
             padding: 0;
             margin-left: 10px;
+            list-style: none;
         }
     }
-
-
-
-
 
 // ===============================================headline
 
     &__content {
-        padding: 35px 15px 33px 15px;
         position: relative;
         z-index: 1;
+        padding: 35px 15px 33px 15px;
 
         @include for-large {
             margin: 75px 0 0 110px;
         }
 
         &_h1 {
-            font-size: 1.6em;        // line-height: 50px;
+            display: block;
             padding: 0;
             margin: 0 0 24px 0;
+            font-size: 1.6em;
             line-height: 2em;
-            display: block;
+
 
             @include for-large {
-                font-size: 2.5em;
                 width: 750px;
+                font-size: 2.5em;
             }
 
             h1 {
                 margin: 0;
-                // z-index: 1000;
             }
         }
 
         &_text {
             display: block;
-            font-size: 24px;
             margin: 0 0 30px 0;
+            font-size: 24px;
             line-height: 1.4em;
 
             @include for-large {
                 width: 450px;
                 margin-top: 40px;
-                // z-index: 1;
             }
         }
     }
@@ -197,13 +192,15 @@
     .button-get-started {
         width: 290px;
         height: 48px;
+        margin-bottom: 15px;
+        border-radius: 2px;
+        border: 0;
         background: #3040C4;
         color: #ffffff;
-        border-radius: 2px;
         font-weight: 700;
         font-size: 18px;
-        border: 0;
-        margin-bottom: 15px;
+
+
 
         @include for-large {
             background: #3040C4;
@@ -219,6 +216,7 @@
     }
 
     .button-learn-more {
+        margin-bottom: 33px;
         width: 290px;
         height: 48px;
         background: #ffffff;
@@ -227,31 +225,34 @@
         font-weight: 700;
         font-size: 18px;
         border: 0;
-        margin-bottom: 33px;
+
 
         @include for-large {
-            background: #ffffff;
+            margin-left: 10px;
             width: 160px;
             height: 48px;
             border-radius: 4px;
+            background: #ffffff;
             color: #3040C4;
             border-radius: 2px;
             font-weight: 700;
             font-size: 18px;
             border: 0;
-            margin-left: 10px;
         }
     }
 
     &__img-man {
-        max-width: 796px;
-        max-height: 448px;
+        position: relative;
+        width: 320px;
         z-index: -1;
+        right: 15px;
 
         @include for-large {
             position: absolute;
             top: 40px;
             right: 25px;
+            width: 796px;
+            max-height: 448px;
         }
 
         &_img {
@@ -261,40 +262,11 @@
     }
 }
 
-// .main-header__menu {
-//     display: block;
-//     display: flex;
-//     flex-direction: row;
-//     list-style: none;
-//     font-size: 17px;
-//     width: 270px;
-//     padding: 0;
-//     margin: auto;
-//     height: 25px;
-//     justify-content: space-between;
-
-//     &_selected {
-//         font-weight: 700;
-//     }
-
-//     &_arrow {
-//         display: flex;
-//         list-style: none;
-//     }
-
-//     &_arrow-list {
-//         list-style: none;
-//         margin: 0;
-//         padding: 0;
-//         margin-left: 10px;
-//     }
-// }
-
 .button_get-started {
-    background: #3040C4;
     width: 160px;
     height: 48px;
     border-radius: 4px;
+    background: #3040C4;
     color: #ffffff;
     border-radius: 2px;
     font-weight: 700;

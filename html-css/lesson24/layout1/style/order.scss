@@ -2,22 +2,22 @@
 
 .order {
     display: flex;
-    flex-direction: column;
     padding: 50px 15px;
+    flex-direction: column;
     background-color: #F4F5F7;
 
     @include for-large {
-        flex-direction: row;
         height: 441px;
         padding: 0;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
     }
 
     &__img-div {
+        margin: 0 auto 40px;
         width: 200px;
         height: 220px;
-        margin: 0 auto 40px;
 
         &_img {
             height: 100%;
@@ -35,10 +35,10 @@
         
 
         &_h1 {
-            font-size: 39px;
-            text-align: center;
             margin: 0 0 18px 0;
             max-width: 555px;
+            font-size: 39px;
+            text-align: center;
 
             @include for-large {
                 text-align: left;
@@ -48,23 +48,25 @@
 
         &_text {
             display: block;
-            font-size: 22px;
-            line-height: 1.4em;
             margin: 0 0 40px 0;
             max-width: 555px;
+            font-size: 22px;
+            line-height: 1.4em;
+
         }
 
         &_trial {
+            max-width: 555px;
             font-size: 14px;
             color: #2b292dbb;
-            max-width: 555px;
+
         }
     }
 
     &__form {
         display: flex;
-        flex-direction: column;
         max-width: 555px;
+        flex-direction: column;
 
         @include for-large {
             flex-direction: row;
@@ -91,19 +93,20 @@
 }
 
 .order_form_input-text {
+    margin-bottom: 12px;
     height: 48px;
     text-align: center;
     font-size: 18px;
-    margin-bottom: 12px;
 
     @include for-large {
-        width: 385px;
         margin-right: 10px;
+        width: 385px;
         text-align: start;
     }
 }
 
 .order_form_button {
+    margin-bottom: 15px;
     width: 290px;
     height: 48px;
     background: #3040C4;
@@ -112,7 +115,6 @@
     font-weight: 700;
     font-size: 18px;
     border: 0;
-    margin-bottom: 15px;
 
     @include for-large {
         width: 160px;
