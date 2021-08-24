@@ -1,12 +1,78 @@
+// ===============================================Count occurences
 
+const str = 'dfvsdv dimasdvasdvsddima;lkuhva     l;ASjvdimalasdi;l   aiovpodima ohpovh dimadima ';
+const w = 'dima';
 
+function countOccurrences(string, word) {
+  if (!Boolean(word)) {
+    return null;
+  }
+  let num = 0;
+  let index = 0;
+  while (string.includes(word, index)) {
+    num += 1;
+    index = string.indexOf(word, index) + word.length;
+    console.log(index);
+  }
 
+  return num;
+}
 
+console.log(countOccurrences(str, w));
 
+// ============================================Разбить текст на строки
 
+// let a = 'wqvsadvs dvs34634dvsdvва иваяив2346ативя атив3462 твт';
+// let b = 4;
+// let string = 654;
 
+// -----------------------------------------don't pass
+// function splitText(string, value = 10) {
+//   if (typeof string !== typeof 'a') {
+//     return null;
+//   }
 
-// =================================================
+//   let newString = string;
+//   const array = [];
+
+//   while (newString.length > 0) {
+
+//     array.push(newString[0].toUpperCase() + newString.slice(1, value));
+//     newString = newString.slice(value, newString.length);
+//   }
+//   return array.join('\n');
+// }
+
+// console.log(splitText(string, value));
+// console.log(splitText(string));
+// ----------------------------------------don't pass
+
+// function splitString(text, len = 10) {
+//   if (typeof text !== typeof 'a') {
+//     return null;
+//   }
+
+//   const strArr = [];
+//   let startPosition = 0;
+
+//   while (true) {
+//     let chunk = text.substr(startPosition, len);
+//     if (chunk.length === 0) {
+//       break;
+//     }
+
+//     // let x = chunk[0].toUpperCase() + chunk.slice(1);
+//     chunk = chunk.padEnd(len, '.');
+//     strArr.push(chunk);
+//     startPosition += len;
+//   }
+
+//   return strArr;
+// }
+
+// console.log(splitString(a, b));
+
+// =================================================Собрать объект
 
 // function buildObject(keysList, valuesList) {
 //   let obj = {};
@@ -14,11 +80,10 @@
 //   keysList.forEach(element => {
 //     obj[element] = '';
 
-  // values.forEach(element => {
+// values.forEach(element => {
 
-  // });
+// });
 
-    
 //   });
 //   console.log(obj);
 //   keysList.reduce((a, b, c, d) => console.log(a, b, c, d));
@@ -40,21 +105,15 @@
 // let z = ['f', 'g', 'h'];
 // let r = [1, 2, 3];
 
-
 // // examples
 // const keys = ['name', 'address', 'age'];
 // const values = ['Bob', 'Ukraine', 34];
-// const result = buildObject(keys, values); 
+// const result = buildObject(keys, values);
 // ==> { name: 'Bob', address: 'Ukraine', age: 56 }
 
 // buildObject(keys, values);
 
-
-
-
-
-
-// ===============================================================
+// ===============================================================Объект в масив пользователей
 
 // const users = {
 //   'user-id-1': {
@@ -82,16 +141,41 @@
 //     age: 8,
 //   },
 // }
+
+// -----------------
+// index[1].id = index[0]
+// -----------------------
+
 // console.log(users);
 // const getCustomersList = obj => {
-//   // const newObj = {...obj};
-//   const newObj = Object.assign({}, obj);
-//   const objToArr = Object.entries(newObj);
-//   const addUserId = objToArr.map(index => index[1].id = index[0]);
-//   const deleteUserId = objToArr.map(index => index = index[1]);
-//   const sortUsersByAge = deleteUserId.sort((a, b) => a.age - b.age);
-  
-//   return sortUsersByAge;
+// //   let newObj = {...obj};
+//   // const newObj = Object.assign({}, obj);
+// //   // console.log(newObj);
+
+// //   let newObj2 = Object.entries(newObj);
+// //   newObj2.map(index => index[1].id = index[0]);
+// //  console.log(newObj2);
+// //   // objToArr.map(index => {
+
+// //   // });
+
+// //   const deleteUserId = newObj2.map(index === [id, user] => index = index[1]);
+// //   const sortUsersByAge = deleteUserId.sort((a, b) => a.age - b.age);
+
+// //   return sortUsersByAge;
+
+// return Object.entries(obj).map(([id, user]) => ({id, ...user,})).sort((a, b) => a.age - b.age);
+// };
+
+// console.log(getCustomersList(users));
+
+// console.log(users);
+
+// --------------------------------------------Working case
+// const getCustomersList = (obj) => {
+//   return Object.entries(obj)
+//     .map(([id, user]) => ({ id, ...user }))
+//     .sort((a, b) => a.age - b.age);
 // };
 
 // console.log(getCustomersList(users));

@@ -1,0 +1,20 @@
+@import 'veriables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Montserrat;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #141b1c;
+  color: #fff;
+}
