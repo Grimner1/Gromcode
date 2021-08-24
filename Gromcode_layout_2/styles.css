@@ -1,3 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Montserrat;
+  font-size: 16px;
+  color: #fff;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #141b1c;
+}
+
 .price-card {
   position: relative;
   display: flex;
@@ -29,6 +48,8 @@
 }
 .price-card__order-btn {
   margin-top: 39px;
+}
+.price-card .order-btn {
   width: 155px;
   height: 40px;
   border-radius: 20px;
@@ -59,16 +80,16 @@
 
 .list {
   display: flex;
-  flex-direction: column;
   padding: 0;
   margin: 0;
   width: 100%;
+  flex-direction: column;
   list-style: none;
 }
 .list li {
   display: flex;
-  flex-direction: row;
   height: 50px;
+  flex-direction: row;
   align-items: center;
 }
 .list li:nth-child(odd) {
@@ -118,25 +139,6 @@
   background-color: #dc3f45;
   text-align: center;
   line-height: 25px;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-family: Montserrat;
-  font-size: 16px;
-}
-
-body {
-  display: flex;
-  height: 100vh;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: #141b1c;
-  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

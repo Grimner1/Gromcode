@@ -1,0 +1,134 @@
+.price-card {
+  position: relative;
+  display: flex;
+  margin-right: 18px;
+  width: 380px;
+  height: 770px;
+  flex-direction: column;
+  align-items: center;
+  background: #334247;
+  overflow: hidden;
+
+  &__title {
+    margin: 33px 0;
+  }
+
+  &__price {
+    margin-bottom: 40px;
+    width: 380px;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 67px;
+  }
+
+  &__description {
+    margin-bottom: 40px;
+    width: 327px;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__order-btn {
+    margin-top: 39px;
+  }
+
+  .order-btn {
+    width: 155px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 43px;
+
+  &__h1 {
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
+
+.list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-direction: column;
+  list-style: none;
+
+  li {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  li:nth-child(odd) {
+    background-color: #2a3438;
+  }
+
+  li:nth-child(even) {
+    background-color: #1f3d63;
+  }
+
+  &__label {
+    margin: 0 22px;
+    width: 15px;
+    height: 13px;
+  }
+}
+
+.basic {
+  background-color: #5bb189;
+}
+
+.basic-label {
+  background-image: url(img/Shape-basic.png);
+}
+
+.business {
+  background-color: #3a6ba5;
+}
+
+.business-label {
+  background-image: url(img/Shape-business.png);
+}
+
+.webshop {
+  background-color: #ec632a;
+}
+
+.webshop-label {
+  background-image: url(img/Shape-webshop.png);
+}
+
+.popular {
+  position: absolute;
+  right: -30px;
+  top: 30px;
+  transform: rotate(45deg);
+  width: 147px;
+  height: 25px;
+  text-transform: uppercase;
+  background-color: #dc3f45;
+  text-align: center;
+  line-height: 25px;
+}
