@@ -6,5 +6,5 @@ export const getSquaredArray = (array) => array.map((el) => el * el);
 console.log(getSquaredArray(arr));
 export const getOddNumbers = (array) => array.filter((el) => el % 2 === 0);
 console.log(getOddNumbers(arr));
-export default const defaultFunc = (number1, number2) => number1 + number2;
+export default (number1, number2) => number1 + number2;
 console.log(defaultFunc(a, b));
