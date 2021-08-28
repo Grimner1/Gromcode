@@ -1,7 +1,6 @@
 {
   "name": "gromcode",
   "version": "1.0.0",
-  "description": "",
   "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +22,13 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0"
+  },
+  "description": ""
 }
