@@ -1,24 +1,71 @@
+// map:
+// input:callback(element, index, array)
+// output: changes element
+
+// const callback = (element, index, array) => {
+//   element = element * 10;
+//   return element;
+// };
+
+// console.log(callback(2));
+
+// const mapArrayElements = (arr, callback) => {
+//   const newArray = [];
+//   arr.map((el, index, arr) => {
+//     newArray.push(callback(el, index, arr));
+//     console.log(el, index, arr);
+//   });
+
+//   return newArray;
+// };
+
+// const arr = [2, 4, 5, 10, 100];
+
+// console.log(mapArrayElements(arr, callback));
+
+// const a = [1, '2.268', '  3', '4.2854   ', '   5   ', '6asc', 'afca7', 'wsdvc8sad', '9asvac0'];
+
+// const cleanTransactionsList = (array) => {
+//   let newArr = [];
+//   array.forEach((el) => {
+//     if (typeof el === typeof 1) {
+//       let x = el.toFixed(2);
+//       newArr.push('$' + x);
+//       console.log(x);
+//     } else if (isFinite(el)) {
+//       let x = +el.trim();
+//       x = x.toFixed(2);
+//       newArr.push('$' + x);
+//       console.log(x);
+//     }
+//   });
+
+//   return newArr;
+// };
+// console.log(cleanTransactionsList(a));
+// console.log(typeof 1);
+
 // ===============================================Count occurences
 
-const str = 'dfvsdv dimasdvasdvsddima;lkuhva     l;ASjvdimalasdi;l   aiovpodima ohpovh dimadima ';
-const w = 'dima';
+// const str = 'dfvsdv dimasdvasdvsddima;lkuhva     l;ASjvdimalasdi;l   aiovpodima ohpovh dimadima ';
+// const w = 'dima';
 
-function countOccurrences(string, word) {
-  if (!Boolean(word)) {
-    return null;
-  }
-  let num = 0;
-  let index = 0;
-  while (string.includes(word, index)) {
-    num += 1;
-    index = string.indexOf(word, index) + word.length;
-    console.log(index);
-  }
+// function countOccurrences(string, word) {
+//   if (!Boolean(word)) {
+//     return null;
+//   }
+//   let num = 0;
+//   let index = 0;
+//   while (string.includes(word, index)) {
+//     num += 1;
+//     index = string.indexOf(word, index) + word.length;
+//     console.log(index);
+//   }
 
-  return num;
-}
+//   return num;
+// }
 
-console.log(countOccurrences(str, w));
+// console.log(countOccurrences(str, w));
 
 // ============================================Разбить текст на строки
 
@@ -179,3 +226,12 @@ console.log(countOccurrences(str, w));
 // };
 
 // console.log(getCustomersList(users));
+{
+  let aaa = 1;
+}
+
+const a = [1, 2, 3];
+const b = { a: 1, b: 2, c: 3 };
+const x = b;
+b.xx = 100;
+console.log(b);
