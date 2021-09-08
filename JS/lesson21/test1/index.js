@@ -27,7 +27,7 @@ export const tasks = [
  * @param {object[]} tasksList
  * @return {undefined}
  */
-const renderTasks = (tasksList) => {
+export const renderTasks = (tasksList) => {
   const taskItem = document.querySelector('.list');
   //   console.dir(tasksList);
   const newTask = tasksList.map(({ text, done }) => {
