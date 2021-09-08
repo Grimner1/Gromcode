@@ -1,14 +1,11 @@
-export function getItemsList() {
-  const elementsList = document.querySelectorAll('.technology');
-  console.dir(elementsList);
-  return elementsList;
-}
-// console.log(getItemsList());
-
-export function getItemsArray() {
-  const elementsArray = document.querySelectorAll('.tool');
-  console.dir(Array.from(elementsArray));
-  return Array.from(elementsArray);
+export function getTitleElement() {
+  const titileElement = document.querySelector('.title');
+  console.dir(titileElement);
+  return titileElement;
 }
 
-// console.log(getItemsArray());
+export function getInputElement() {
+  const inputElement = document.querySelector('input[type = "text"]');
+  console.dir(inputElement);
+  return inputElement;
+}

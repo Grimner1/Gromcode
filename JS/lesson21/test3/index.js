@@ -1,29 +1,14 @@
-export function getTitle() {
-  const tittle = document.querySelector('.title');
-  // console.log(tittle);
-  const titleText = tittle.textContent;
-  return titleText;
+export function getItemsList() {
+  const elementsList = document.querySelectorAll('.technology');
+  console.dir(elementsList);
+  return elementsList;
+}
+// console.log(getItemsList());
+
+export function getItemsArray() {
+  const elementsArray = document.querySelectorAll('.tool');
+  console.dir(Array.from(elementsArray));
+  return Array.from(elementsArray);
 }
 
-export function getDescription() {
-  const description = document.querySelector('.about');
-  const descriptionText = description.innerText;
-  return descriptionText;
-}
-
-export function getPlans() {
-  const plans = document.querySelector('.plans');
-  const plansContent = plans.innerHTML;
-  return plansContent;
-}
-
-export function getGoal() {
-  const goal = document.querySelector('.goal');
-  const goalContent = goal.outerHTML;
-  return goalContent;
-}
-
-// console.log(getTitle());
-// console.log(getDescription());
-// console.log(getPlans());
-// console.log(getGoal());
+// console.log(getItemsArray());
