@@ -1,15 +1,14 @@
 export function getItemsList() {
-  let elementsList = document.querySelectorAll('.technology');
+  const elementsList = document.querySelectorAll('.technology');
   console.dir(elementsList);
   return elementsList;
 }
-console.log(getItemList());
+// console.log(getItemsList());
 
 export function getItemsArray() {
-  let elements = document.querySelectorAll('.tool');
-  //   let elementsArray = [...elements];
-  console.dir(Array.from(elements));
-  return Array.from(elements);
+  const elementsArray = document.querySelectorAll('.tool');
+  console.dir(Array.from(elementsArray));
+  return Array.from(elementsArray);
 }
 
-console.log(getItemArray());
+// console.log(getItemsArray());
