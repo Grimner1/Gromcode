@@ -19,23 +19,14 @@ const logGreyDiv = addSpan.bind(null, 'DIV', 'grey');
 const logGreyP = addSpan.bind(null, 'P', 'grey');
 const logGreySpan = addSpan.bind(null, 'SPAN', 'grey');
 
-// divEl.addEventListener('click', logGreyDiv, true); // <=== зачем true?
-// divEl.addEventListener('click', logGreenDiv);
+divEl.addEventListener('click', logGreyDiv, true); // <=== зачем true?
+divEl.addEventListener('click', logGreenDiv);
 
-// pEl.addEventListener('click', logGreyP, true); // <=== зачем true?
-// pEl.addEventListener('click', logGreenP);
+pEl.addEventListener('click', logGreyP, true); // <=== зачем true?
+pEl.addEventListener('click', logGreenP);
 
-// spanEl.addEventListener('click', logGreySpan, true); // <=== зачем true?
-// spanEl.addEventListener('click', logGreenSpan);
-
-// divEl.removeEventListener('click', logGreyDiv, true); // <=== зачем true?
-// divEl.removeEventListener('click', logGreenDiv);
-
-// pEl.removeEventListener('click', logGreyP, true); // <=== зачем true?
-// pEl.removeEventListener('click', logGreenP);
-
-// spanEl.removeEventListener('click', logGreySpan, true); // <=== зачем true?
-// spanEl.removeEventListener('click', logGreenSpan);
+spanEl.addEventListener('click', logGreySpan, true); // <=== зачем true?
+spanEl.addEventListener('click', logGreenSpan);
 
 function clear() {
   newSpan.innerHTML = '';
