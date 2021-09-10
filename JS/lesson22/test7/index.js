@@ -1,4 +1,4 @@
-const btn = document.querySelectorAll('.btn');
+export const btn = document.querySelectorAll('.btn');
 // console.log(...btn);
 const body = document.querySelector('body');
 // console.log(body);
