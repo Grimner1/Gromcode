@@ -1,4 +1,4 @@
-const body = document.querySelector('body');
+export const body = document.querySelector('body');
 
 function handleClick(event) {
   // console.log(event.target.tagName);
