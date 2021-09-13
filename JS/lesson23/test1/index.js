@@ -10,10 +10,12 @@ const passwordErrorText = document.querySelector('.error-text_password');
 // console.log([emailForm, passwordForm]);
 
 const isRequired = (value) => (value ? undefined : 'Required');
-const isEmail = (value) => (value.includes('@') ? undefined : 'Shold be an email');
+// const isEmail = (value) => (value.includes('@') ? undefined : 'Shold be an email');
+const isEmail = (value) =>
+  value ? (value.includes('@') ? undefined : 'Shold be an email') : 'Required';
 
 const validatorByField = {
-  email: [isRequired, isEmail],
+  email: [isEmail],
   password: [isRequired],
 };
 
@@ -39,13 +41,18 @@ const onPasswordChange = (event) => {
 emailForm.addEventListener('input', onEmailChange);
 passwordForm.addEventListener('input', onPasswordChange);
 
-const formValueToAlert = () => {
-  const text = `{Email: ${emailForm.value}, Password: ${passwordForm.value}}`;
-  //   console.log(text);
-  alert(text);
-};
+// wrong option:
+// const formValueToAlert = () => {
+//   const text = `{Email: ${emailForm.value}, Password: ${passwordForm.value}}`;
+//   //   console.log(text);
+//   alert(text);
+// };
 
-btn.addEventListener('click', formValueToAlert);
+// btn.addEventListener('click', formValueToAlert);
+
+// right option:
+
+// ===========================
 
 // function for event block
 
