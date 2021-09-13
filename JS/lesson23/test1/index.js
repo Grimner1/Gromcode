@@ -12,7 +12,7 @@ const passwordErrorText = document.querySelector('.error-text_password');
 const isRequired = (value) => (value ? undefined : 'Required');
 // const isEmail = (value) => (value.includes('@') ? undefined : 'Shold be an email');
 const isEmail = (value) =>
-  value ? (value.includes('@') ? undefined : 'Shold be an email') : 'Required';
+  value ? (value.includes('@') ? undefined : 'Should be an email') : 'Required';
 
 const validatorByField = {
   email: [isEmail],
