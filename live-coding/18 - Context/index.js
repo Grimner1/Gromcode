@@ -1,6 +1,6 @@
 'use strict';
 
-const timer = {
+export const timer = {
   secondPassed: 0,
   minsPassed: 0,
   timerId: null,
