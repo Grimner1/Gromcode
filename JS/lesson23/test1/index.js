@@ -12,18 +12,27 @@ const passwordErrorText = document.querySelector('.error-text_password');
 const isRequired = (value) => (value ? undefined : 'Required');
 const isEmail = (value) => (value.includes('@') ? undefined : 'Shold be an email');
 
-const onEmailChange = (event) => {
-  const errorText = [isRequired, isEmail]
-    .map((validstor) => validstor(event.target.value))
+const validatorByField = {
+  email: [isRequired, isEmail],
+  password: [isRequired],
+};
+
+const valodate = (fieldName, value) => {
+  const validators = validatorByField[fieldName];
+
+  return validators
+    .map((validstor) => validstor(value))
     .filter((errText) => errText)
-    .toLocaleString(', ');
+    .join(', ');
+};
+
+const onEmailChange = (event) => {
+  const errorText = valodate('email', event.target.value);
   emailErrorText.textContent = errorText;
 };
 
 const onPasswordChange = (event) => {
-  const errorText = [isRequired]
-    .map((validstor) => validstor(event.target.value))
-    .filter((errText) => errText);
+  const errorText = valodate('password', event.target.value);
   passwordErrorText.textContent = errorText;
 };
 
