@@ -51,6 +51,25 @@ passwordForm.addEventListener('input', onPasswordChange);
 // btn.addEventListener('click', formValueToAlert);
 
 // right option:
+const loginForm = document.querySelector('.login-form');
+
+const fieldsErrorText = (event) => {
+  event.preventDefault();
+  const formDate = [...new FormData(loginForm)].reduce(
+    (acc, [key, value]) => ({
+      ...acc,
+      [key]: value,
+    }),
+    {},
+  );
+
+  alert(JSON.stringify(formDate));
+};
+
+loginForm.addEventListener('submit', fieldsErrorText);
+
+// const formValue = new FormData(loginForm);
+// console.log(new FormData(loginForm).get('email'));
 
 // ===========================
 
