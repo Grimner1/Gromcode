@@ -101,7 +101,7 @@ const funcDuneCheckbox = (event) => {
   renderTasks(tasks);
 };
 
-listElem.addEventListener('change', funcDuneCheckbox);
+listElem.addEventListener('click', funcDuneCheckbox);
 
 // ------------------------------------------так и не понял как тут через map -----
 
