@@ -46,7 +46,7 @@ const pressToAddTask = () => {
   }
 };
 
-creatButton.addEventListener('mouseup', pressToAddTask);
+creatButton.addEventListener('click', pressToAddTask);
 
 // -------------------------------------------
 
@@ -94,7 +94,7 @@ const defaultElement = [
   { text: 'Buy meat', done: false },
 ];
 
-defaultElement.map(({ text, done }) => {
+defaultElement.forEach(({ text, done }) => {
   const newTask = { text, done, id: taskId };
   taskId += 1;
   tasks.push(newTask);
