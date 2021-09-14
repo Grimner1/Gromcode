@@ -74,26 +74,29 @@ const funcDuneCheckbox = (event) => {
   //   console.log(checkboxElement.dataset.id);
   //   console.log(tasks[checkboxElement.dataset.id].done);
   //   console.log(checkboxElement.checked);
-  const findEl = tasks.filter(({ id }) => {
-    // console.log(id);
-    // console.log(checkboxElement.dataset.id == id);
-    if (id == checkboxElement.dataset.id) {
-      return id;
-    }
-  });
-  // console.log(findEl[0].done);
-  if (checkboxElement.checked) {
-    liElement.classList.add('list__item_done');
-    // console.log(checkboxElement.dataset.id);
-    findEl[0].done = checkboxElement.checked;
-    // tasks[checkboxElement.dataset.id].done = true;
-    tasks;
-  } else {
-    liElement.classList.remove('list__item_done');
-    // console.log(checkboxElement.dataset.id);
-    findEl[0].done = checkboxElement.checked;
-    // tasks[checkboxElement.dataset.id].done = false;
-  }
+
+  const getOBj = tasks.find((elem) => elem.id === +checkboxElement.dataset.id);
+  getOBj.done = checkboxElement.checked;
+
+  // const findEl = tasks.filter(({ id }) => {
+  //   // console.log(id);
+  //   // console.log(checkboxElement.dataset.id == id);
+  //   if (id == checkboxElement.dataset.id) {
+  //     return id;
+  //   }
+  // });
+  // // console.log(findEl[0].done);
+  // if (checkboxElement.checked) {
+  //   liElement.classList.add('list__item_done');
+  //   // console.log(checkboxElement.dataset.id);
+  //   findEl[0].done = checkboxElement.checked;
+  //   // tasks[checkboxElement.dataset.id].done = true;
+  // } else {
+  //   liElement.classList.remove('list__item_done');
+  //   // console.log(checkboxElement.dataset.id);
+  //   findEl[0].done = checkboxElement.checked;
+  //   // tasks[checkboxElement.dataset.id].done = false;
+  // }
   listElem.innerHTML = '';
   renderTasks(tasks);
 };
