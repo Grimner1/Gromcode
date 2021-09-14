@@ -67,61 +67,60 @@ creatButton.addEventListener('click', pressToAddTask);
 
 // -------------------------------------------
 
+// const funcDuneCheckbox = (event) => {
+//   // console.log(event.target.closest('li'));
+//   const liElement = event.target.closest('li');
+//   const checkboxElement = event.target;
+//   // console.log(liElement);
+//   //   console.log(checkboxElement.dataset.id);
+//   //   console.log(tasks[checkboxElement.dataset.id].done);
+//   //   console.log(checkboxElement.checked);
+//   const findEl = tasks.filter(({ id }) => {
+//     // console.log(id);
+//     // console.log(checkboxElement.dataset.id == id);
+//     if (id == checkboxElement.dataset.id) {
+//       return id;
+//     }
+//   });
+//   // console.log(findEl[0].done);
+//   if (checkboxElement.checked) {
+//     liElement.classList.add('list__item_done');
+//     // console.log(checkboxElement.dataset.id);
+//     findEl[0].done = true;
+//     // tasks[checkboxElement.dataset.id].done = true;
+//     tasks;
+//   } else {
+//     liElement.classList.remove('list__item_done');
+//     // console.log(checkboxElement.dataset.id);
+//     findEl[0].done = false;
+//     // tasks[checkboxElement.dataset.id].done = false;
+//   }
+//   listElem.innerHTML = '';
+//   renderTasks(tasks);
+// };
+
+// listElem.addEventListener('change', funcDuneCheckbox);
+
+// ------------------------------------------так и не понял как тут через map -----
 const funcDuneCheckbox = (event) => {
-  // console.log(event.target.closest('li'));
   const liElement = event.target.closest('li');
   const checkboxElement = event.target;
-  // console.log(liElement);
-  //   console.log(checkboxElement.dataset.id);
-  //   console.log(tasks[checkboxElement.dataset.id].done);
-  //   console.log(checkboxElement.checked);
-  const findEl = tasks.filter(({ id }) => {
-    // console.log(id);
-    // console.log(checkboxElement.dataset.id == id);
+  tasks.map(({ done, id }) => {
     if (id == checkboxElement.dataset.id) {
-      return id;
+      if (checkboxElement.checked) {
+        console.log(liElement);
+        liElement.classList.add('list__item_done');
+        done = true;
+      } else {
+        console.log(222);
+        liElement.classList.remove('list__item_done');
+        done = false;
+      }
     }
   });
-  // console.log(findEl[0].done);
-  if (checkboxElement.checked) {
-    liElement.classList.add('list__item_done');
-    // console.log(checkboxElement.dataset.id);
-    findEl[0].done = true;
-    // tasks[checkboxElement.dataset.id].done = true;
-    tasks;
-  } else {
-    liElement.classList.remove('list__item_done');
-    // console.log(checkboxElement.dataset.id);
-    findEl[0].done = false;
-    // tasks[checkboxElement.dataset.id].done = false;
-  }
+
   listElem.innerHTML = '';
   renderTasks(tasks);
 };
 
 listElem.addEventListener('change', funcDuneCheckbox);
-
-// ------------------------------------------так и не понял как тут через map -----
-// const funcDuneCheckbox = (event) => {
-//   const liElement = event.target.closest('li');
-//   const checkboxElement = event.target;
-
-//   const xx = tasks.map(({ done, id }) => {
-//     if (id == checkboxElement.dataset.id) {
-//       if (checkboxElement.checked) {
-//         liElement.classList.add('list__item_done');
-//         done = true;
-//       } else {
-//         liElement.classList.remove('list__item_done');
-//         done = false;
-//       }
-//     }
-//   });
-
-//   console.log(xx);
-
-// listElem.innerHTML = '';
-// renderTasks(tasks);
-// };
-
-// listElem.addEventListener('change', funcDuneCheckbox);
