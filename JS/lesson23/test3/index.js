@@ -102,22 +102,27 @@ creatButton.addEventListener('click', pressToAddTask);
 // listElem.addEventListener('change', funcDuneCheckbox);
 
 // ------------------------------------------так и не понял как тут через map -----
-const funcDuneCheckbox = (event) => {
+
+const func = (event) => {
   const liElement = event.target.closest('li');
   const checkboxElement = event.target;
-  tasks.map(({ done, id }) => {
+  tasks.map(({ id }, index) => {
     if (id == checkboxElement.dataset.id) {
       if (checkboxElement.checked) {
-        console.log(liElement);
+        console.log(tasks);
         liElement.classList.add('list__item_done');
-        done = true;
+        tasks[index].done = true;
       } else {
-        console.log(222);
+        console.log(tasks);
         liElement.classList.remove('list__item_done');
-        done = false;
+        tasks[index].done = false;
       }
     }
   });
+};
+
+const funcDuneCheckbox = (event) => {
+  func(event);
 
   listElem.innerHTML = '';
   renderTasks(tasks);
