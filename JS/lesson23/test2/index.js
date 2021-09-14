@@ -5,9 +5,9 @@
 
 const boardSpan = document.querySelector('.board__selected-seat');
 const arena = document.querySelector('.arena');
-const seat = document.querySelector('.sector__seat');
+// const seat = document.querySelector('.sector__seat');
 
-const findSeat = (event) => {
+const seatsNumber = (event) => {
   let seat;
   let line;
   let sector;
@@ -29,5 +29,5 @@ const findSeat = (event) => {
   }
 };
 
-arena.addEventListener('click', findSeat);
+arena.addEventListener('click', seatsNumber);
 // console.log(seat);
