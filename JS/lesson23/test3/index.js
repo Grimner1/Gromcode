@@ -2,8 +2,13 @@ const listElem = document.querySelector('.list');
 const creatButton = document.querySelector('.create-task-btn');
 const fieldinput = document.querySelector('.task-input');
 
-const tasks = [];
-let taskId = 1;
+const tasks = [
+  { text: 'Buy milk', done: true, id: 1 },
+  { text: 'Pick up Tom from airport', done: true, id: 2 },
+  { text: 'Visit party', done: false, id: 3 },
+  { text: 'Visit doctor', done: false, id: 4 },
+  { text: 'Buy meat', done: false, id: 5 },
+];
 
 const renderTasks = (tasksList) => {
   const tasksElems = tasksList
@@ -14,7 +19,6 @@ const renderTasks = (tasksList) => {
       const checkbox = document.createElement('input');
       checkbox.setAttribute('type', 'checkbox');
       checkbox.setAttribute('data-id', id);
-
       checkbox.checked = done;
       checkbox.classList.add('list__item-checkbox');
       if (done) {
@@ -29,7 +33,21 @@ const renderTasks = (tasksList) => {
   fieldinput.value = '';
 };
 
+renderTasks(tasks);
+
+// - должен создавать новый объект, пушить объкт в массив, рендерить массив
+
+// const addtasks = (textOfInput) => {
+//   const newTask = { text: textOfInput, done: false, id: taskId };
+//   taskId += 1;
+//   tasks.push(newTask);
+//   listElem.innerHTML = '';
+
+//   renderTasks(tasks);
+// };
 // -------------------------------------------
+
+let taskId = 6;
 
 const pressToAddTask = () => {
   if (!fieldinput.value) {
@@ -39,7 +57,6 @@ const pressToAddTask = () => {
     const newTask = { text: textOfInput, done: false, id: taskId };
     taskId += 1;
     tasks.push(newTask);
-    // console.log(tasks); //------------------
     listElem.innerHTML = '';
 
     renderTasks(tasks);
@@ -84,20 +101,46 @@ const funcDuneCheckbox = (event) => {
 
 listElem.addEventListener('change', funcDuneCheckbox);
 
+// ------------------------------------------
+
+// const funcDuneCheckbox = (event) => {
+//   const liElement = event.target.closest('li');
+//   const checkboxElement = event.target;
+//   // console.log(checkboxElement);
+//   const findEl = tasks.map(({ id }) => {
+//     if (id == event.target.dataset.id) {
+//       console.log(checkboxElement.dataset.id);
+//     }
+//   });
+// };
+
+// if (checkboxElement.checked) {
+//   liElement.classList.add('list__item_done');
+//   findEl[0].done = true;
+// } else {
+//   liElement.classList.remove('list__item_done');
+//   findEl[0].done = false;
+// }
+// listElem.innerHTML = '';
+// renderTasks(tasks);
+// // };
+
+// listElem.addEventListener('change', funcDuneCheckbox);
+
 // -----------------добавление элементов по умолчанию
 
-const defaultElement = [
-  { text: 'Buy milk', done: true },
-  { text: 'Pick up Tom from airport', done: true },
-  { text: 'Visit party', done: false },
-  { text: 'Visit doctor', done: false },
-  { text: 'Buy meat', done: false },
-];
+// const defaultElement = [
+//   { text: 'Buy milk', done: true },
+//   { text: 'Pick up Tom from airport', done: true },
+//   { text: 'Visit party', done: false },
+//   { text: 'Visit doctor', done: false },
+//   { text: 'Buy meat', done: false },
+// ];
 
-defaultElement.forEach(({ text, done }) => {
-  const newTask = { text, done, id: taskId };
-  taskId += 1;
-  tasks.push(newTask);
-  listElem.innerHTML = '';
-  renderTasks(tasks);
-});
+// defaultElement.forEach(({ text, done }) => {
+//   const newTask = { text, done, id: taskId };
+//   taskId += 1;
+//   tasks.push(newTask);
+//   listElem.innerHTML = '';
+//   renderTasks(tasks);
+// });
