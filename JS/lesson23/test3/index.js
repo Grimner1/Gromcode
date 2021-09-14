@@ -101,46 +101,27 @@ const funcDuneCheckbox = (event) => {
 
 listElem.addEventListener('change', funcDuneCheckbox);
 
-// ------------------------------------------
-
+// ------------------------------------------так и не понял как тут через map -----
 // const funcDuneCheckbox = (event) => {
 //   const liElement = event.target.closest('li');
 //   const checkboxElement = event.target;
-//   // console.log(checkboxElement);
-//   const findEl = tasks.map(({ id }) => {
-//     if (id == event.target.dataset.id) {
-//       console.log(checkboxElement.dataset.id);
+
+//   const xx = tasks.map(({ done, id }) => {
+//     if (id == checkboxElement.dataset.id) {
+//       if (checkboxElement.checked) {
+//         liElement.classList.add('list__item_done');
+//         done = true;
+//       } else {
+//         liElement.classList.remove('list__item_done');
+//         done = false;
+//       }
 //     }
 //   });
-// };
 
-// if (checkboxElement.checked) {
-//   liElement.classList.add('list__item_done');
-//   findEl[0].done = true;
-// } else {
-//   liElement.classList.remove('list__item_done');
-//   findEl[0].done = false;
-// }
+//   console.log(xx);
+
 // listElem.innerHTML = '';
 // renderTasks(tasks);
-// // };
+// };
 
 // listElem.addEventListener('change', funcDuneCheckbox);
-
-// -----------------добавление элементов по умолчанию
-
-// const defaultElement = [
-//   { text: 'Buy milk', done: true },
-//   { text: 'Pick up Tom from airport', done: true },
-//   { text: 'Visit party', done: false },
-//   { text: 'Visit doctor', done: false },
-//   { text: 'Buy meat', done: false },
-// ];
-
-// defaultElement.forEach(({ text, done }) => {
-//   const newTask = { text, done, id: taskId };
-//   taskId += 1;
-//   tasks.push(newTask);
-//   listElem.innerHTML = '';
-//   renderTasks(tasks);
-// });
