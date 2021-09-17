@@ -38,5 +38,5 @@ export const renderTask = () => {
   const tasksElems = taskList.sort((a, b) => a.done - b.done).map(createListItem);
 
   listElem.append(...tasksElems);
-  console.log(taskList);
+  // console.log(taskList);
 };
