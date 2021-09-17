@@ -1,4 +1,4 @@
-function shmoment(date) {
+export function shmoment(date) {
   //   console.log(date);
   let copyDate = new Date(date);
   //   console.log(copyDate);
