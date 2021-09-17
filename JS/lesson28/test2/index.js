@@ -1,28 +1,28 @@
-const favorites = ['id-1', 'id-112'];
+// const favorites = ['id-1', 'id-112'];
 
-const tree = {
-  id: 'id-1',
-  name: 'Products',
-  nodes: [
-    {
-      id: 'id-11',
-      name: 'Products',
-      nodes: [
-        {
-          id: 'id-111',
-          name: 'Products',
-          nodes: [],
-        },
+// const tree = {
+//   id: 'id-1',
+//   name: 'Products',
+//   nodes: [
+//     {
+//       id: 'id-11',
+//       name: 'Products',
+//       nodes: [
+//         {
+//           id: 'id-111',
+//           name: 'Products',
+//           nodes: [],
+//         },
 
-        {
-          id: 'id-112',
-          name: 'Products',
-          nodes: [],
-        },
-      ],
-    },
-  ],
-};
+//         {
+//           id: 'id-112',
+//           name: 'Products',
+//           nodes: [],
+//         },
+//       ],
+//     },
+//   ],
+// };
 
 function markFavorites(tree, favorites) {
   const isFavorites = favorites.includes(tree.id);
@@ -34,6 +34,6 @@ function markFavorites(tree, favorites) {
   };
 }
 
-const result = markFavorites(tree, favorites);
+// const result = markFavorites(tree, favorites);
 
-console.log(result);
+// console.log(result);
