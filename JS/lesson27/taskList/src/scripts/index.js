@@ -13,3 +13,5 @@ const onStorageChange = (e) => {
 };
 
 window.addEventListener('storage', onStorageChange);
+
+// localStorage.clear('taskList');
