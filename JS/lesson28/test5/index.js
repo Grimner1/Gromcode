@@ -1,4 +1,5 @@
-export function shmoment(date) {
+// export
+function shmoment(date) {
   //   console.log(date);
   let copyDate = new Date(date);
   //   console.log(copyDate);
@@ -8,7 +9,7 @@ export function shmoment(date) {
       switch (value) {
         case 'years':
           return 'FullYear';
-        case 'montgs':
+        case 'months':
           return 'Month';
         case 'days':
           return 'Date';
@@ -57,9 +58,10 @@ export function shmoment(date) {
 // console.log(x);
 // console.log(y);
 
-// const date1 = shmoment(new Date(2000, 10, 10, 10, 10, 10, 10))
-//   .add('years', 8)
-//   .add('days', 8)
-//   .subtract('days', 10)
-//   .result();
-// console.log(date1);
+const date1 = shmoment(new Date(2000, 10, 10, 10, 10, 10, 10))
+  .add('years', 8)
+  .add('days', 8)
+  .subtract('days', 10)
+  .add('months', 2)
+  .result();
+console.log(date1);
