@@ -25,11 +25,11 @@
 // };
 
 export function markFavorites(tree, favorites) {
-  const isFavorites = favorites.includes(tree.id);
+  const isFavorite = favorites.includes(tree.id);
 
   return {
     ...tree,
-    isFavorites,
+    isFavorite,
     nodes: tree.nodes.map((childNode) => markFavorites(childNode, favorites)),
   };
 }
