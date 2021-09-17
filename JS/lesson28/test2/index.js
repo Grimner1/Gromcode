@@ -24,7 +24,7 @@
 //   ],
 // };
 
-function markFavorites(tree, favorites) {
+export function markFavorites(tree, favorites) {
   const isFavorites = favorites.includes(tree.id);
 
   return {
