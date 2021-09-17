@@ -1,4 +1,4 @@
-function calc(resultber) {
+export function calc(resultber) {
   let result = resultber;
   console.log(result);
 
