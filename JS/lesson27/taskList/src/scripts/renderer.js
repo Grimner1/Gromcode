@@ -1,8 +1,9 @@
 import { getItem, setItem } from './storage.js';
 
-// const compareTask = () => {
-//
-// }
+// const updateTaskList = () => {
+//   localStorage.clear('taskList');
+
+// };
 
 const listElem = document.querySelector('.list');
 //
@@ -31,11 +32,11 @@ const createListItem = ({ text, done, id }) => {
 };
 
 export const renderTask = () => {
-  const taskList = getItem('taskList') || [];
+  const tasksList = getItem('tasksList') || [];
 
   listElem.innerHTML = '';
   //   const tasksElems = taskList.sort(compareTask).map(createListItem);
-  const tasksElems = taskList.sort((a, b) => a.done - b.done).map(createListItem);
+  const tasksElems = tasksList.sort((a, b) => a.done - b.done).map(createListItem);
 
   listElem.append(...tasksElems);
   // console.log(taskList);

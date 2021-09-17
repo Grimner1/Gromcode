@@ -7,8 +7,8 @@ export const onToggleTask = (e) => {
     return;
   }
 
-  const taskList = getItem('taskList');
-  const newTasksList = taskList.map((task) => {
+  const tasksList = getItem('tasksList');
+  const newTasksList = tasksList.map((task) => {
     if (task.id === e.target.dataset.id) {
       const done = e.target.checked;
       return {
@@ -23,7 +23,7 @@ export const onToggleTask = (e) => {
     return task;
   });
 
-  setItem('taskList', newTasksList);
+  setItem('tasksList', newTasksList);
 
   renderTask();
 };
