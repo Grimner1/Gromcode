@@ -1,4 +1,4 @@
-const addImage = (imgSrc, callback) => {
+export const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
   imgElem.setAttribute('alt', 'somePhoto');
   imgElem.src = imgSrc;
@@ -12,7 +12,7 @@ const addImage = (imgSrc, callback) => {
 
   imgElem.addEventListener('load', whenImgLoaded);
 
-  imgElem.addEventListener('error', () => callback('Image not loaded'));
+  imgElem.addEventListener('error', () => callback('Image load is failed'));
 };
 
 const imgSrc =
@@ -31,7 +31,7 @@ const onImageLoaded = (error, imgElem) => {
   sizeElem.textContent = `${width} x ${height}`;
 };
 
-addImage(imgSrc, onImageLoaded);
+// addImage(imgSrc, onImageLoaded);
 
 // examples
 // addImage(
