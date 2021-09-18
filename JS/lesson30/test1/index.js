@@ -7,7 +7,8 @@ export const addImage = (imgSrc) => {
     imgContainer.append(imgElem);
 
     const onImageLoaded = () => {
-      resolve(imgElem);
+      const { width, height } = imgElem;
+      resolve({ width, height });
     };
 
     imgElem.addEventListener('load', onImageLoaded);
@@ -20,10 +21,9 @@ export const addImage = (imgSrc) => {
 const imgSrc =
   'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg';
 
-const result = addImageWithPromise(imgSrc);
+const result = addImage(imgSrc);
 
-const onImageLoaded = (imgElem) => {
-  const { width, height } = imgElem;
+const onImageLoaded = ({ width, height }) => {
   const sizeElem = document.querySelector('.image-size');
   sizeElem.textContent = `${width} x ${height}`;
 };
