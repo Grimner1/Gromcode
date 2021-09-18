@@ -6,6 +6,7 @@ export const addImage = (imgSrc, callback) => {
   imgContainer.append(imgElem);
 
   const onImageLoaded = () => {
+    //   const {width, height} = imgElem;
     callback(null, imgElem);
   };
 
@@ -23,7 +24,7 @@ const onImageLoaded = (error, imgElem) => {
     console.log(error);
     return;
   }
-
+  //   console.log(imgElem);
   const { width, height } = imgElem;
   const sizeElem = document.querySelector('.image-size');
 
