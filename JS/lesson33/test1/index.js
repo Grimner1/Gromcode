@@ -13,7 +13,11 @@ const fetchUserData = (userName) => {
 };
 
 const getUserData = (userData) => {
-  console.log(userData);
+  const { avatar_url, name, location } = userData;
+  console.log({ avatar_url, name, location });
+  userAvatar.src = avatar_url;
+  userNameField.textContent = name;
+  userLocation.textContent = location;
 };
 
 const onSearch = () => {
