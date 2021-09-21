@@ -8,13 +8,13 @@ const userLocation = document.querySelector('.user__location');
 const url = 'https://api.github.com/users/';
 
 const fetchUserData = (userName) => {
-  console.log(`${url}${userName}`);
+  // console.log(`${url}${userName}`);
   return fetch(`${url}${userName}`).then((response) => response.json());
 };
 
 const getUserData = (userData) => {
   const { avatar_url, name, location } = userData;
-  console.log({ avatar_url, name, location });
+  // console.log({ avatar_url, name, location });
   userAvatar.src = avatar_url;
   userNameField.textContent = name;
   userLocation.textContent = location;
