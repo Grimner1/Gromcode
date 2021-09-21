@@ -17,7 +17,7 @@ const getUserData = (userData) => {
   // console.log({ avatar_url, name, location });
   userAvatar.src = avatar_url;
   userNameField.textContent = name;
-  userLocation.textContent = location;
+  userLocation.textContent = `from ${location}`;
 };
 
 const onSearch = () => {
