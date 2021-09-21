@@ -2,7 +2,7 @@ const input = document.querySelector('.name-form__input');
 const button = document.querySelector('.name-form__btn');
 
 const userAvatar = document.querySelector('.user__avatar');
-const userName = document.querySelector('.user__name');
+const userNameField = document.querySelector('.user__name');
 const userLocation = document.querySelector('.user__location');
 
 const url = 'https://api.github.com/users/';
