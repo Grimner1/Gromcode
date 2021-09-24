@@ -28,17 +28,31 @@ const setInfo = (userInfo) =>
   });
 
 const onButtonClick = () => {
+  if (!(emailField.value && nameField.value && passField.value)) {
+    errorField.innerHTML = 'Failed to create user';
+    return;
+  }
+
+  if (!emailField.value.includes('@')) {
+    errorField.innerHTML = 'Failed to create user';
+    return;
+  }
+
   const userInfo = {
     email: emailField.value,
     name: nameField.value,
     password: passField.value,
   };
+
+  emailField.value = '';
+  nameField.value = '';
+  passField.value = '';
+
   setInfo(userInfo)
-    .then((data) => alert(data))
-    .catch((err) => alert(err));
-  //   const response = setInfo(userInfo).then((el) => el);
-  //   errorField.innerHTML = response;
-  //   alert(response); // <===== как правильно получить ответ от сервера?
+    // .then((data) => alert(data.json()))
+    .then((data) => alert(JSON.stringify(data)))
+    .catch((error) => (errorField.innerHTML = error));
+  //   console.log(emailField.value);
 };
 
 submitButton.addEventListener('click', onButtonClick);
@@ -54,3 +68,9 @@ loginForm.addEventListener(
   },
   false,
 );
+
+const cleanError = () => {
+  errorField.innerHTML = '';
+};
+
+loginForm.addEventListener('input', cleanError);
