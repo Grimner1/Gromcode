@@ -33,7 +33,9 @@ const onButtonClick = () => {
     name: nameField.value,
     password: passField.value,
   };
-  setInfo(userInfo);
+  setInfo(userInfo)
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
   //   const response = setInfo(userInfo).then((el) => el);
   //   errorField.innerHTML = response;
   //   alert(response); // <===== как правильно получить ответ от сервера?
