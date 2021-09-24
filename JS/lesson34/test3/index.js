@@ -34,8 +34,8 @@ const onButtonClick = () => {
     password: passField.value,
   };
   setInfo(userInfo)
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+    .then((data) => alert(data))
+    .catch((err) => alert(err));
   //   const response = setInfo(userInfo).then((el) => el);
   //   errorField.innerHTML = response;
   //   alert(response); // <===== как правильно получить ответ от сервера?
@@ -47,9 +47,9 @@ loginForm.addEventListener(
   'submit',
   function () {
     if (loginForm.reportValidity()) {
-      submitButton.setAttribute('enabled');
+      submitButton.setAttribute('enabled', 'enabled');
     } else {
-      submitButton.setAttribute('disabled');
+      submitButton.setAttribute('disabled', 'disabled');
     }
   },
   false,
