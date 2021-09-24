@@ -14,6 +14,7 @@ const submitButton = document.querySelector('.submit-button');
 const emailField = document.querySelector('#email');
 const nameField = document.querySelector('#name');
 const passField = document.querySelector('#password');
+const errorField = document.querySelector('.error-text');
 
 const url = 'https://614c751d59e92d00176ad25f.mockapi.io/tasksList/user';
 
@@ -33,16 +34,20 @@ const onButtonClick = () => {
     password: passField.value,
   };
   const response = setInfo(userInfo).then((el) => el);
-  alert(response); // <===== как правильно получить ответ от сервера?
+  //   errorField.innerHTML = response;
+  //   alert(response); // <===== как правильно получить ответ от сервера?
 };
 
 submitButton.addEventListener('click', onButtonClick);
 
-// ===================как из нижепривндннного когда получить true\false?
 loginForm.addEventListener(
   'submit',
   function () {
-    loginForm.reportValidity();
+    if (loginForm.reportValidity()) {
+      submitButton.setAttribute('enabled');
+    } else {
+      submitButton.setAttribute('disabled');
+    }
   },
   false,
 );
