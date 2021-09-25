@@ -59,11 +59,13 @@ const onButtonClick = (event) => {
   };
 
   // clearinputFields();
-  loginForm.reset();
 
   setInfo(userInfo)
     .then((data) => data.json())
-    .then((data) => alert(JSON.stringify(data))) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
+    .then((data) => {
+      alert(JSON.stringify(data));
+      loginForm.reset();
+    }) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
     .catch(() => (errorField.textContent = 'Failed to create user')); // <=== тут я принимаю ошибки от сервера
 };
 
