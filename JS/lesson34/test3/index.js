@@ -27,8 +27,14 @@ const setInfo = (userInfo) =>
     body: JSON.stringify(userInfo),
   });
 
-// ==== тут я отменяю дефолтное поведение сабмита - правильно?
+const clearinputFields = () => {
+  emailField.value = ''; // <=== тут очистка полей после ввода
+  nameField.value = '';
+  passField.value = '';
+};
+
 const onButtonClick = (event) => {
+  // ==== тут я отменяю дефолтное поведение сабмита - правильно?
   event.preventDefault();
 
   // ==== тут проверка на пустые строки
@@ -50,15 +56,11 @@ const onButtonClick = (event) => {
     password: passField.value,
   };
 
-  emailField.value = ''; // <=== тут очистка полей после ввода
-  nameField.value = '';
-  passField.value = '';
+  clearinputFields();
 
   setInfo(userInfo)
-    // .then((data) => alert(data.json()))
-    .then((data) => alert(JSON.stringify(data))) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
+    .then((data) => alert(data.json())) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
     .catch((error) => (errorField.innerHTML = error)); // <=== тут я принимаю ошибки от сервера
-  //   console.log(emailField.value);
 };
 
 submitButton.addEventListener('click', onButtonClick);
