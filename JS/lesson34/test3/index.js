@@ -27,48 +27,54 @@ const setInfo = (userInfo) =>
     body: JSON.stringify(userInfo),
   });
 
-const onButtonClick = () => {
+// ==== тут я отменяю дефолтное поведение сабмита - правильно?
+const onButtonClick = (event) => {
+  event.preventDefault();
+
+  // ==== тут проверка на пустые строки
   if (!(emailField.value && nameField.value && passField.value)) {
     errorField.innerHTML = 'Failed to create user';
     return;
   }
 
+  // === тут проверка на наличие @ в эмейле
   if (!emailField.value.includes('@')) {
     errorField.innerHTML = 'Failed to create user';
     return;
   }
 
+  // === тут я собираю инфо с полей в объект
   const userInfo = {
     email: emailField.value,
     name: nameField.value,
     password: passField.value,
   };
 
-  emailField.value = '';
+  emailField.value = ''; // <=== тут очистка полей после ввода
   nameField.value = '';
   passField.value = '';
 
   setInfo(userInfo)
     // .then((data) => alert(data.json()))
-    .then((data) => alert(JSON.stringify(data)))
-    .catch((error) => (errorField.innerHTML = error));
+    .then((data) => alert(JSON.stringify(data))) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
+    .catch((error) => (errorField.innerHTML = error)); // <=== тут я принимаю ошибки от сервера
   //   console.log(emailField.value);
 };
 
 submitButton.addEventListener('click', onButtonClick);
 
-loginForm.addEventListener(
-  'submit',
-  function () {
-    if (loginForm.reportValidity()) {
-      submitButton.setAttribute('enabled', 'enabled');
-    } else {
-      submitButton.setAttribute('disabled', 'disabled');
-    }
-  },
-  false,
-);
+// === тут я снимаю\задаю дизейбл кнопке в зависимости от валидности полей
+const checkValidForm = () => {
+  if (loginForm.reportValidity()) {
+    submitButton.removeAttribute('disabled', 'disabled');
+  } else {
+    submitButton.setAttribute('disabled', 'disabled');
+  }
+};
 
+loginForm.addEventListener('input', checkValidForm);
+
+// === тут я очищаю после с ошибкой если были сделаны любые изменения с инпутами
 const cleanError = () => {
   errorField.innerHTML = '';
 };
