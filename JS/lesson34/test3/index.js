@@ -33,7 +33,7 @@ const onButtonClick = (event) => {
   };
 
   setInfo(userInfo)
-    .then((data) => data.json)
+    .then((data) => data.json())
     .then((data) => {
       alert(JSON.stringify(data));
       loginForm.reset();
