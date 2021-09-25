@@ -33,6 +33,8 @@ const clearinputFields = () => {
   passField.value = '';
 };
 
+let xxx = null;
+
 const onButtonClick = (event) => {
   // ==== тут я отменяю дефолтное поведение сабмита - правильно?
   event.preventDefault();
@@ -59,7 +61,8 @@ const onButtonClick = (event) => {
   clearinputFields();
 
   setInfo(userInfo)
-    .then((data) => alert(data.json())) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
+    .then((data) => data.json())
+    .then((data) => alert(JSON.stringify(data))) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
     .catch((error) => (errorField.innerHTML = error)); // <=== тут я принимаю ошибки от сервера
 };
 
