@@ -47,7 +47,7 @@ const onButtonClick = (event) => {
 
   // === тут проверка на наличие @ в эмейле
   if (!emailField.value.includes('@')) {
-    errorField.innerHTML = 'Failed to create user';
+    errorField.textContent = 'Failed to create user';
     return;
   }
 
@@ -58,12 +58,13 @@ const onButtonClick = (event) => {
     password: passField.value,
   };
 
-  clearinputFields();
+  // clearinputFields();
+  loginForm.reset();
 
   setInfo(userInfo)
     .then((data) => data.json())
     .then((data) => alert(JSON.stringify(data))) // <=== тут я пытась принять ответ от сервера если отправка данных успешна
-    .catch((error) => (errorField.innerHTML = error)); // <=== тут я принимаю ошибки от сервера
+    .catch(() => (errorField.textContent = 'Failed to create user')); // <=== тут я принимаю ошибки от сервера
 };
 
 submitButton.addEventListener('click', onButtonClick);
