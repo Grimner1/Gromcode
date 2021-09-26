@@ -25,11 +25,11 @@ const url = 'https://api.github.com/users/';
 
 userAvatar.src = 'https://avatars3.githubusercontent.com/u10001';
 
-const hideShinner = () => {
+const showShinner = () => {
   spinner.classList.remove('spinner_hidden');
 };
 
-const showSpinner = () => {
+const hideSpinner = () => {
   spinner.classList.add('spinner_hidden');
 };
 
@@ -51,12 +51,12 @@ const getUserRepo = (userUrl) => {
     .then((userInfoInObject) => renderList(userInfoInObject))
     .catch(() => alert('Failed to load data'))
     .finally(() => {
-      showSpinner();
+      hideSpinner();
     });
 };
 
 const getUserInfo = () => {
-  hideShinner();
+  showShinner();
   repoList.textContent = '';
   const userUrl = inputForm.value;
   return fetch(url + userUrl)
@@ -65,11 +65,14 @@ const getUserInfo = () => {
       const { avatar_url, name, location, repos_url } = userData;
       userAvatar.src = avatar_url;
       userName.textContent = name;
-      userLocation.textContent = location;
+      userLocation.textContent = `from ${location}`;
       return repos_url;
     })
     .then((repoUrl) => getUserRepo(repoUrl))
     .catch(() => alert('Failed to load data'));
+  // .finally(() => {
+  //   hideShinner();
+  // });
 };
 
 button.addEventListener('click', getUserInfo);
