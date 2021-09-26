@@ -69,10 +69,10 @@ const getUserInfo = () => {
       return repos_url;
     })
     .then((repoUrl) => getUserRepo(repoUrl))
-    .catch(() => alert('Failed to load data'));
-  // .finally(() => {
-  //   hideShinner();
-  // });
+    .catch(() => alert('Failed to load data'))
+    .finally(() => {
+      hideSpinner();
+    });
 };
 
 button.addEventListener('click', getUserInfo);
