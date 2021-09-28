@@ -15,8 +15,12 @@ const hideSpinner = () => {
 };
 
 const getUserRepo = async (repoUrl) => {
-  const userInfoInObject = await getFetch(repoUrl);
-  renderList(userInfoInObject);
+  try {
+    const userInfoInObject = await getFetch(repoUrl);
+    renderList(userInfoInObject);
+  } catch {
+    alert('Failed to load data');
+  }
 };
 
 // ============= специально оставил то, что было до рефакторинга
