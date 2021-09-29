@@ -1,4 +1,4 @@
-import { render } from './renderer.js';
+import { render, renderTasks } from './renderer.js';
 import { createTask } from './createTask.js';
 import { pushOnCheckbox } from './updateList.js';
 import { getTasksList, setItem, deleteListElem } from './storage.js';
@@ -16,8 +16,8 @@ const onCreateButtonPush = () => {
 
   fieldinput.value = '';
   createTask(text);
-  listElem.innerHTML = '';
-  render();
+  // listElem.innerHTML = '';
+  // render();
 };
 
 // ----------------------old version for localStorage
@@ -46,8 +46,10 @@ const deleteTask = (event) => {
   }
   const liElem = clickTarget.closest('li');
   const liElemId = liElem.dataset.id;
-  deleteListElem(liElemId);
-  render();
+  deleteListElem(liElemId)
+    .then(() => getTasksList())
+    .then((taskslist) => renderTasks(taskslist));
+  // render();
 };
 
 export const initTodoList = () => {

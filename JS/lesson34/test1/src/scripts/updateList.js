@@ -1,5 +1,5 @@
 import { getTasksList, setItem, changeListElement } from './storage.js';
-import { render } from './renderer.js';
+import { render, renderTasks } from './renderer.js';
 
 export const pushOnCheckbox = (event) => {
   const clickTarget = event.target;
@@ -12,17 +12,16 @@ export const pushOnCheckbox = (event) => {
   const liElementId = liElement.dataset.id;
 
   getTasksList().then((tasksList) => {
-    console.log(tasksList);
     const taskElement = tasksList.find((elem) => elem.id === liElement.dataset.id);
     if (taskElement.done === false) {
       taskElement.done = true;
     } else {
       taskElement.done = false;
     }
-    changeListElement(liElementId, taskElement);
-    render();
+    changeListElement(liElementId, taskElement)
+      .then(() => getTasksList())
+      .then((tasksList_) => renderTasks(tasksList_));
   });
-  render();
 };
 
 // чеклист:

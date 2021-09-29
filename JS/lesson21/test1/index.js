@@ -1,6 +1,7 @@
-// 'use strict';
+'use strict';
 
-export const tasks = [
+// export
+const tasks = [
   { text: 'Buy milk', done: false },
   { text: 'Pick up Tom from airport', done: false },
   { text: 'Visit party', done: false },
@@ -27,7 +28,8 @@ export const tasks = [
  * @param {object[]} tasksList
  * @return {undefined}
  */
-export const renderTasks = (tasksList) => {
+// export
+const renderTasks = (tasksList) => {
   const taskItem = document.querySelector('.list');
   //   console.dir(tasksList);
   const newTask = tasksList.map(({ text, done }) => {
@@ -50,4 +52,4 @@ export const renderTasks = (tasksList) => {
   taskItem.append(...newTask);
 };
 
-// console.log(renderTasks(tasks));
+console.log(renderTasks(tasks));

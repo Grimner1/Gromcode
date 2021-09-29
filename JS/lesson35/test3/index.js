@@ -55,19 +55,21 @@ const getUserRepo = (userUrl) => {
     });
 };
 
+const render = (userData) => {
+  const { avatar_url, name, location, repos_url } = userData;
+  userAvatar.src = avatar_url;
+  userName.textContent = name;
+  userLocation.textContent = `from ${location}`;
+  return repos_url;
+};
+
 const getUserInfo = () => {
   showShinner();
   repoList.textContent = '';
   const userUrl = inputForm.value;
   return fetch(url + userUrl)
     .then((response) => response.json())
-    .then((userData) => {
-      const { avatar_url, name, location, repos_url } = userData;
-      userAvatar.src = avatar_url;
-      userName.textContent = name;
-      userLocation.textContent = `from ${location}`;
-      return repos_url;
-    })
+    .then((userData) => render(userData))
     .then((repoUrl) => getUserRepo(repoUrl))
     .catch(() => alert('Failed to load data'))
     .finally(() => {

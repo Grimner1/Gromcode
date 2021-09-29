@@ -1,4 +1,5 @@
-export const addImage = (imgSrc) => {
+// export
+const addImage = (imgSrc) => {
   const p = new Promise((resolve, reject) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'somePhoto');
@@ -13,7 +14,11 @@ export const addImage = (imgSrc) => {
 
     imgElem.addEventListener('load', onImageLoaded);
 
-    imgElem.addEventListener('error', () => reject(new Error('Image load is failed')));
+    const error = () => {
+      reject(new Error('Image load is failed...'));
+    };
+
+    imgElem.addEventListener('error', error);
   });
   return p;
 };
@@ -28,10 +33,14 @@ const onImageLoaded = ({ width, height }) => {
   sizeElem.textContent = `${width} x ${height}`;
 };
 
-result.then((some) => console.log(some));
-result.then((some) => onImageLoaded(some));
+// result.then((some) => console.log(some));
+result.then(
+  (some) => onImageLoaded(some),
+  (error) => console.log(error),
+);
 // result.then((some) => onImageLoaded(some));
-result.catch((error) => console.log(error));
+
+// result.catch((error) => console.log(error));
 
 // examples
 // addImage(

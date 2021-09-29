@@ -2,7 +2,7 @@ const btn = document.querySelector('.single-use-btn');
 
 function oneMorNot() {
   console.log('clicked');
-  btn.removeEventListener('mouseup', oneMorNot);
+  btn.removeEventListener('click', oneMorNot);
 }
 
-btn.addEventListener('mouseup', oneMorNot);
+btn.addEventListener('click', oneMorNot);

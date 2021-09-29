@@ -37,6 +37,7 @@ export const getUserInfo = async () => {
 
   try {
     const userData = await getFetch(url + userUrl);
+    console.log(userData);
     const repoUrl = renderUserInfo(userData);
     getUserRepo(repoUrl);
   } catch {

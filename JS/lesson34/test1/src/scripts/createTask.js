@@ -1,4 +1,5 @@
-import { setItem } from './storage.js';
+import { render, renderTasks } from './renderer.js';
+import { setItem, getTasksList } from './storage.js';
 
 // ----------------------old version for localStorage
 // let taskId = 1;
@@ -16,5 +17,7 @@ import { setItem } from './storage.js';
 
 export const createTask = (text) => {
   const newTask = { text, done: false };
-  setItem(newTask);
+  setItem(newTask)
+    .then(() => getTasksList())
+    .then((tasksList) => renderTasks(tasksList));
 };

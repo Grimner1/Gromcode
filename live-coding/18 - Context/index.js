@@ -1,21 +1,20 @@
 'use strict';
 
-export const timer = {
-  secondPassed: 0,
+// export
+const timer = {
+  secondsPassed: 0,
   minsPassed: 0,
   timerId: null,
 
   startTimer() {
-    // console.log(this);
-
     this.timerId = setInterval(() => {
-      console.log(this);
+      //   console.log(this.getTime());
 
-      this.secondPassed += 1;
+      this.secondsPassed += 1;
 
-      if (this.secondPassed === 60) {
+      if (this.secondsPassed === 60) {
         this.minsPassed += 1;
-        this.secondPassed = 0;
+        this.secondsPassed = 0;
       }
     }, 1000);
 
@@ -68,16 +67,16 @@ export const timer = {
   getTime() {
     let sec;
 
-    if (this.secondPassed < 10) {
-      sec = '0' + this.secondPassed;
+    if (this.secondsPassed < 10) {
+      sec = '0' + this.secondsPassed;
     } else {
-      sec = this.secondPassed;
+      sec = this.secondsPassed;
     }
     return `${this.minsPassed}:${sec}`;
   },
 
   resetTimer() {
-    this.secondPassed = 0;
+    this.secondsPassed = 0;
     this.minsPassed = 0;
   },
 };

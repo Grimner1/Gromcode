@@ -30,7 +30,8 @@ const createLiElement = ({ text, done, id }) => {
   return listItemElem;
 };
 
-const renderTasks = (tasksList) => {
+export const renderTasks = (tasksList) => {
+  listElem.innerHTML = '';
   const taskElements = tasksList
     .sort((a, b) => a.done - b.done)
     .map((taskObj) => createLiElement(taskObj));
@@ -40,5 +41,5 @@ const renderTasks = (tasksList) => {
 export const render = () => {
   listElem.innerHTML = '';
 
-  getTasksList().then((el) => renderTasks(el));
+  getTasksList().then((tasksList) => renderTasks(tasksList));
 };

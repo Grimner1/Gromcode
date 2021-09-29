@@ -5,4 +5,4 @@ const doSome = () => {
   console.log(input.value);
 };
 
-btn.addEventListener('mouseup', doSome);
+btn.addEventListener('click', doSome);

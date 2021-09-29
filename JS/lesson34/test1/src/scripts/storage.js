@@ -14,7 +14,7 @@
 
 const url = 'https://614c751d59e92d00176ad25f.mockapi.io/tasksList/Tasks';
 
-export const setItem = (taskElem) => {
+export const setItem = (taskElem) =>
   fetch(url, {
     method: 'POST',
     headers: {
@@ -22,17 +22,14 @@ export const setItem = (taskElem) => {
     },
     body: JSON.stringify(taskElem),
   });
-};
 
 export const getTasksList = () => fetch(url).then((taskElem) => taskElem.json());
 
 export const getListElem = (id) => fetch(`${url}/${id}`).then((taskElem) => taskElem.json());
 
-export const deleteListElem = (id) => {
-  fetch(`${url}/${id}`, { method: 'DELETE' });
-};
+export const deleteListElem = (id) => fetch(`${url}/${id}`, { method: 'DELETE' });
 
-export const changeListElement = (id, taskElem) => {
+export const changeListElement = (id, taskElem) =>
   fetch(`${url}/${id}`, {
     method: 'PUT',
     headers: {
@@ -40,7 +37,6 @@ export const changeListElement = (id, taskElem) => {
     },
     body: JSON.stringify(taskElem),
   });
-};
 
 const obj = { text: 'text 4', done: true };
 
